@@ -19,7 +19,11 @@ const events = DATA.events.filter((event) =>
 );
 ---
 
-<Layout title={`${speakerData.name} | ${DATA.title}`} lang="es">
+<Layout
+  title={`${speakerData.name} | ${DATA.title}`}
+  description={speakerData.descriptionParagraphs.join(" ")}
+  lang="es"
+>
   <main class="flex flex-col gap-6 min-h-screen">
     <aside
       class="grid grid-cols-1 md:grid-cols-[1fr_4fr] gap-12 md:gap-32 w-full bg-green-50 dark:bg-blue-800 p-2 py-10 md:p-32"
