@@ -1,0 +1,112 @@
+---
+import type { Socials } from "../data/data.type";
+interface Props {
+  socials: Socials;
+}
+
+const { socials } = Astro.props;
+---
+
+<ul
+  class="flex flex-row flex-wrap gap-2 md:gap-3 align-middle justify-center lg:justify-normal listnon text-lg md:text-xl lg:text-2xl text-dark-background dark:text-light-background"
+>
+  {
+    socials?.devto && (
+      <li>
+        <a target="_blank" href={socials?.devto}>
+          <i class="fa-brands fa-dev" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.github && (
+      <li>
+        <a target="_blank" href={socials?.github}>
+          <i class="fa-brands fa-github" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.instagram && (
+      <li>
+        <a target="_blank" href={socials?.instagram}>
+          <i class="fa-brands fa-instagram" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.linkedin && (
+      <li>
+        <a target="_blank" href={socials?.linkedin}>
+          <i class="fa-brands fa-linkedin" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.mail && (
+      <li>
+        <a target="_blank" href={`mailto:${socials?.mail}`}>
+          <i class="fa-solid fa-envelope" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.mastodon && (
+      <li>
+        <a target="_blank" href={socials?.mastodon}>
+          <i class="fa-brands fa-mastodon" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.medium && (
+      <li>
+        <a target="_blank" href={socials?.medium}>
+          <i class="fa-brands fa-medium" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.twitch && (
+      <li>
+        <a target="_blank" href={socials?.twitch}>
+          <i class="fa-brands fa-twitch" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.twitter && (
+      <li>
+        <a target="_blank" href={socials?.twitter}>
+          <i class="fa-brands fa-twitter" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.website && (
+      <li>
+        <a target="_blank" href={socials?.website}>
+          <i class="fa-solid fa-globe" />
+        </a>
+      </li>
+    )
+  }
+  {
+    socials?.youtube && (
+      <li>
+        <a target="_blank" href={socials?.youtube}>
+          <i class="fa-brands fa-youtube" />
+        </a>
+      </li>
+    )
+  }
+</ul>

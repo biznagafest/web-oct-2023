@@ -1,0 +1,17 @@
+---
+import type { Nullish } from "../../utils/nullish";
+export interface Props {
+  animation: string;
+  repeat?: Nullish<boolean>;
+}
+
+const { animation, repeat = false } = Astro.props;
+---
+
+<div
+  class=`animate`
+  data-animation=`${animation}`
+  data-animation-repeat=`${repeat ? 'repeat' : ''}`
+>
+  <slot />
+</div>

@@ -1,0 +1,111 @@
+---
+import { DATA } from "../data/data";
+import DarkModeToggleButton from "./DarkModeToggleButton.astro";
+import If from "./utils/If.astro";
+const pathname = new URL(Astro.request.url)?.pathname;
+const currentPath = pathname.slice(1); //
+---
+
+<nav
+  id="top"
+  class="flex flex-wrap items-center justify-between w-full px-8 py-5 md:px-16 md:py-10 text-lg text-dark-background dark:text-light-background"
+>
+  <div class="w-full max-w-[150px] sm:max-w-[180px] md:max-w-[200px]">
+    <a href="/#top" class="h-10">
+      <img
+        src="/logo.svg"
+        alt=`Logo of ${DATA.title}`
+        class="brightness-100 dark:invert"
+      />
+    </a>
+  </div>
+  <svg class="h-6 w-6 cursor-pointer xl:hidden block"> </svg>
+  <svg
+    xmlns="<http://www.w3.org/2000/svg>"
+    id="menu-button"
+    class="h-6 w-6 cursor-pointer xl:hidden block"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+  <div
+    class="hidden py-3 xl:py-0 w-full xl:flex xl:items-center xl:w-auto"
+    id="menu"
+  >
+    <ul
+      class="flex justify-evenly gap-2 text-sm flex-col lg:flex-row font-bold"
+    >
+      <If condition={!!DATA.speakers.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/#speakers" class="px-3"> Speakers</a>
+        </li>
+      </If>
+      <If condition={!!DATA.sponsors.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/#sponsors" class="px-3"> Sponsors</a>
+        </li>
+      </If>
+      <If condition={!!DATA.tickets.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/#tickets" class="px-3">Entradas</a>
+        </li>
+      </If>
+      <If condition={!!DATA.faq.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/#faq" class="px-3">FAQ</a>
+        </li>
+      </If>
+      <li
+        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      >
+        <a href="/#venue" class="px-3">Ubicación</a>
+      </li>
+      <li
+        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      >
+        <a href="/code" class=`px-3 ${currentPath==='code' ? 'activeRoute':''}`
+          >Código de conducta</a
+        >
+      </li>
+      <li
+        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      >
+        <a
+          target="_blank"
+          class="text-white p-2 rounded-lg bg-green-600 hover:bg-green-400 dark:bg-blue-600 dark:hover:bg-blue-400 transition-colors"
+          href="https://www.eventbrite.es/e/entradas-biznagafest-2023-638556609007"
+          >Comprar entradas</a
+        >
+      </li>
+      <li
+        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+      >
+        <DarkModeToggleButton />
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const button = document.querySelector("#menu-button"); // Hamburger Icon
+    const menu = document.querySelector("#menu"); // Menu
+    console.log("loaded");
+    button.addEventListener("click", () => {
+      console.log("click");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</nav>

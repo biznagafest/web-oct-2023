@@ -1,36 +1,66 @@
 ---
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import Navigation from "../components/Navigation.astro";
 export interface Props {
-	title: string;
+  title: string;
+  lang: string;
 }
 
-const { title } = Astro.props;
+const { title, lang } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang={lang}>
+  <Head title={title} />
+  <body
+    class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+  >
+    <Navigation />
+    <div class="overflow-hidden"><slot /></div>
+    <Footer />
+    <script>
+      const html = document.documentElement;
+      if (!!localStorage.getItem("dark")) {
+        html.classList.add("dark");
+      }
+
+      const animations = [...document.querySelectorAll(".animate")];
+      const callback = (
+        entries: IntersectionObserverEntry[],
+        observer: IntersectionObserver
+      ) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          let animationClasses =
+            entry.target.getAttribute("data-animation") ?? "";
+          animationClasses = animationClasses.split(" ");
+
+          if (entry.isIntersecting) {
+            if (
+              !entry.target.getAttribute("data-animation-repeat") &&
+              entry.target.getAttribute("data-animation-repeated")
+            ) {
+              observer.unobserve(entry.target);
+              return;
+            }
+            entry.target.setAttribute("data-animation-repeated", "true");
+            animationClasses.forEach((className: any) => {
+              entry.target.classList.add(className);
+            });
+          } else if (
+            !entry.isIntersecting &&
+            entry.boundingClientRect.top > 0
+          ) {
+            animationClasses.forEach((className: any) => {
+              entry.target.classList.remove(className);
+            });
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback);
+
+      animations.forEach((animation) => observer.observe(animation));
+    </script>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

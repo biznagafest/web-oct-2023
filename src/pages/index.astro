@@ -1,81 +1,379 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import { DATA } from "../data/data";
+import Speaker from "../components/Speaker.astro";
+import Sponsor from "../components/Sponsor.astro";
+import If from "../components/utils/If.astro";
+import AnimatedOnViewportEnter from "../components/utils/AnimatedOnViewportEnter.astro";
+import Accordion from "../components/Accordion";
+import TicketSection from "../components/TicketSection";
+import Countdown from "../components/Countdown";
+import type { Sponsor as ISponsor, SponsorTier } from "../data/data.type";
+
+function formatDate(date: Date) {
+  const formatter = new Intl.DateTimeFormat("es-ES", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const formattedDate = formatter.format(date);
+
+  return formattedDate;
+}
+
+const sponsors: Record<SponsorTier, (ISponsor & { index: number })[]> = {
+  platinum: [],
+  gold: [],
+  silver: [],
+  bronze: [],
+  community: [],
+  food: [],
+  media: [],
+  supporter: [],
+};
+
+for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
+  const sponsorsOfTier = sponsors[sponsor.tier] ?? [];
+  sponsorsOfTier.push({
+    ...sponsor,
+    index: Number(index),
+  });
+}
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<AnimatedOnViewportEnter animation="animate__animated animate__fadeIn">
+  <Layout title={DATA.title} lang="es">
+    <header>
+      <section
+        id="banner"
+        class="h-[400px] bg-green-50 dark:bg-blue-900 w-full flex flex-col gap-3 align-bottom justify-end p-10 md:p-20 overflow-hidden"
+      >
+        <h1 class="text-5xl">{DATA.title}</h1>
+        <AnimatedOnViewportEnter
+          animation="animate__animated animate__fadeInLeft"
+        >
+          <h2 class="text-2xl">{DATA.venue.title}</h2>
+        </AnimatedOnViewportEnter>
+        <AnimatedOnViewportEnter
+          animation="animate__animated animate__fadeInUp animate__delay-1s"
+        >
+          <span class="text-md font-bold"
+            >{`${DATA.venue.city}, ${formatDate(DATA.date)}`}</span
+          >
+        </AnimatedOnViewportEnter>
+        <div class="relative">
+          <img
+            src="logo-banner.svg"
+            alt=""
+            class="w-[700px] h-[700px] aspect-square absolute right-[-180px] top-[-400px] opacity-25 -rotate-[25deg] select-none"
+            style="-webkit-user-drag: none;"
+          />
+        </div>
+      </section>
+    </header>
+    <main>
+      <section id="value" class="bg-light-background dark:bg-dark-background">
+        <div class="container flex flex-col gap-4 md:gap-10 px-2">
+          <div class="flex flex-col lg:flex-row justify-between gap-6">
+            <p class="text-center md:text-left lg:px-0 lg:w-1/2">
+              {DATA.about.description}
+            </p>
+            <div
+              class="flex flex-col gap-2 lg:gap-6 justify-center lg:text-right pl-10 md:pl-0"
+            >
+              <AnimatedOnViewportEnter
+                animation="animate__animated animate__fadeInRight"
+              >
+                <span class="font-bold text-2xl lg:text-5xl"
+                  >{DATA.about.lengthInHours} Horas de duración.</span
+                >
+              </AnimatedOnViewportEnter>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+              <AnimatedOnViewportEnter
+                animation="animate__animated animate__fadeInRight animate__delay-1s"
+              >
+                <span class="font-bold text-2xl lg:text-5xl"
+                  >+ {DATA.about.attendees} Asistentes.</span
+                >
+              </AnimatedOnViewportEnter>
+            </div>
+          </div>
+          <Countdown date={DATA.date.toString()} client:only />
+        </div>
+      </section>
+      <If condition={!!DATA.speakers.length}>
+        <section
+          id="speakers"
+          class="bg-blue-50 dark:bg-green-800 text-dark-background dark:text-light-background"
+        >
+          <div class="container flex flex-col gap-16">
+            <AnimatedOnViewportEnter
+              animation="animate__animated animate__fadeInLeft"
+            >
+              <h2 class="text-3xl font-bold text-center md:text-left">
+                Speakers
+              </h2>
+            </AnimatedOnViewportEnter>
+
+            <div
+              class="flex flex-col align-middle justify-center md:grid md:grid-cols-2 gap-16 md:auto-rows-fr md:place-content-center px-2"
+            >
+              {
+                DATA.speakers.map((speaker, index) => {
+                  return <Speaker speaker={speaker} index={index} />;
+                })
+              }
+            </div>
+          </div>
+        </section>
+      </If>
+      <If condition={!!DATA.sponsors.length}>
+        <section
+          id="sponsors"
+          class="bg-light-background dark:bg-dark-background"
+        >
+          <div class="container flex flex-col gap-16">
+            <AnimatedOnViewportEnter
+              animation="animate__animated animate__fadeInLeft"
+            >
+              <h2 class="text-3xl font-bold text-center md:text-left">
+                Sponsors
+              </h2>
+            </AnimatedOnViewportEnter>
+            <If condition={!!sponsors.platinum.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Platinum
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.platinum.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.gold.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Gold
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.gold.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.silver.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Silver
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.silver.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.bronze.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Bronze
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.bronze.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.media.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Media
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.media.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.community.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Community Partners
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.community.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.supporter.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Supporters
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.supporter.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+            <If condition={!!sponsors.food.length}>
+              <section class="flex flex-col gap-5">
+                <h3
+                  class="text-green-300 dark:text-blue-200 text-3xl font-semibold text-center"
+                >
+                  Fooding Partners
+                </h3>
+                <article
+                  class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                >
+                  {
+                    sponsors.food.map((sponsor) => (
+                      <Sponsor sponsor={sponsor} />
+                    ))
+                  }
+                </article>
+              </section>
+            </If>
+          </div>
+        </section>
+      </If>
+      <If condition={!!DATA.tickets.length}>
+        <section
+          id="tickets"
+          class="bg-yellow-100 dark:bg-yellow-700 text-dark-background"
+        >
+          <div class="container flex flex-col gap-10">
+            <AnimatedOnViewportEnter
+              animation="animate__animated animate__fadeInLeft"
+            >
+              <h2 class="text-3xl font-bold text-center md:text-left">
+                Compra tu entrada
+              </h2>
+            </AnimatedOnViewportEnter>
+            <AnimatedOnViewportEnter
+              animation="animate__animated animate__fadeIn"
+            >
+              <TicketSection tickets={DATA.tickets} client:only />
+            </AnimatedOnViewportEnter>
+          </div>
+        </section>
+      </If>
+      <If condition={!!DATA.faq.length}>
+        <section
+          id="faq"
+          class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+        >
+          <div class="container flex flex-col gap-10">
+            <AnimatedOnViewportEnter
+              animation="animate__animated animate__fadeInLeft"
+            >
+              <h2 class="text-3xl font-bold text-center md:text-left">FAQ</h2>
+            </AnimatedOnViewportEnter>
+            <div class="block lg:grid lg:grid-cols-[4fr_3fr] px-2 md:px-0">
+              <Accordion data={DATA.faq} client:only />
+            </div>
+          </div>
+        </section>
+      </If>
+      <section
+        id="venue"
+        class="bg-yellow-100 dark:bg-yellow-700 text-dark-background"
+      >
+        <div class="flex flex-col lg:grid lg:grid-cols-[3fr_4fr] gap-10">
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
+          >
+            <div
+              class="flex flex-col gap-6 md:mx-auto py-10 md:py-20 md:px-48 h-full"
+            >
+              <h2 class="text-3xl font-bold text-center md:text-left">
+                Ubicación
+              </h2>
+
+              <p class="px-2 text-center md:text-left md:px-0">
+                {DATA.venue.address}, {DATA.venue.city}
+              </p>
+            </div>
+          </AnimatedOnViewportEnter>
+          <iframe
+            class="h-full w-full min-h-[600px]"
+            src={DATA.venue.mapUrl}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+      <section
+        id="last"
+        class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+      >
+        <div class="container flex flex-col gap-10">
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
+          >
+            <h2 class="text-3xl font-bold text-center md:text-left">
+              Última Edición
+            </h2>
+          </AnimatedOnViewportEnter>
+          <div class="w-11/12 md:w-10/12 aspect-video mx-auto">
+            <iframe
+              class="w-full h-full"
+              src={DATA.lastEditionVideoUrl}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+  </Layout>
+</AnimatedOnViewportEnter>

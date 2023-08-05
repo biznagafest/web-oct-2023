@@ -1,0 +1,40 @@
+---
+import type { Sponsor } from "../data/data.type";
+
+interface Props {
+  sponsor: Sponsor;
+}
+
+const { sponsor } = Astro.props;
+---
+
+<a
+  href={sponsor.url}
+  class={`block ${
+    sponsor.tier === "platinum"
+      ? "w-[400px] md:w-[500px]"
+      : sponsor.tier === "gold"
+      ? "w-[350px] md:w-[450px]"
+      : sponsor.tier === "silver"
+      ? "w-[280px] md:w-[380px]"
+      : sponsor.tier === "bronze"
+      ? "w-[230px] md:w-[330px]"
+      : sponsor.tier === "media"
+      ? "w-[200px] md:w-[300px]"
+      : sponsor.tier === "food"
+      ? "w-[200px] md:w-[300px]"
+      : sponsor.tier === "community"
+      ? "w-[150px] md:w-[250px]"
+      : sponsor.tier === "supporter"
+      ? "w-[150px] md:w-[250px]"
+      : sponsor.tier === "other"
+      ? "w-[150px] md:w-[250px]"
+      : "w-[150px] md:w-[250px]"
+  } hover:scale-110 transition-transform`}
+>
+  <img
+    src={sponsor.picture}
+    alt=`Logo of ${sponsor.name}`
+    class="brightness-100 dark:invert w-full"
+  />
+</a>
