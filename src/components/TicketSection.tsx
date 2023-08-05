@@ -13,11 +13,11 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
       <div className="flex flex-col-reverse md:grid md:grid-cols-[2fr_3fr] justify-between">
         <section>
           {selectedTicket ? (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 px-6">
               <p className="text-center md:text-left">
                 Con tu entrada tendrás acceso a todas las sesiones, además de:
               </p>
-              <ul className="list-disc list-inside md:text-left px-6">
+              <ul className="list-disc list-inside md:text-left">
                 {selectedTicket.perks.map((perk, index) => (
                   <li key={index}>{perk}</li>
                 ))}
@@ -35,7 +35,7 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
         <section>
           <div className="flex flex-row flex-wrap gap-4 align-middle justify-center md:grid md:grid-cols-3">
             {tickets.map((ticket, index) => (
-              <div
+              <article
                 key={index}
                 onClick={() => handleTicketClick(ticket)}
                 className="w-2/4 md:w-full"
@@ -79,7 +79,7 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
                     ""
                   )}
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </section>
