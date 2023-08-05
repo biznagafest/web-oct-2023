@@ -39,6 +39,34 @@ export const speakers = [
       twitter: "https://twitter.com/LeiferMendez",
     },
   },
+  {
+    name: "Carmen Ansio",
+    position: "Freelance UX Engineer.",
+    picture: "/speakers/carmen.jpg",
+    descriptionParagraphs: [
+      "Mi nombre es Carmen Ansio y soy freelance UX Engineer. ",
+      "He trabajado en compañías increíbles diseñando e implementando productos digitales desde hace más de 10 años.",
+      "Además formo parte del programa de Google GDE y comparto mi pasión sobre diseño y desarrollo web a diario en redes. Actualmente imparto formaciones y consultorías enfocadas en formación para perfiles de diseño y desarrollo web.",
+    ],
+    socials: {
+      mail: "carmenansio@gmail.com",
+      twitter: "https://twitter.com/carmenansio",
+    },
+  },
+  {
+    name: "Alvaro Lopez Sanchez",
+    position: "R&D Engineer / Innovation, Fortris",
+    picture: "/speakers/black.png",
+    descriptionParagraphs: [
+      "+10 yrs of expertise as a software engineer in the video game industry.",
+      "In recent years, I turned his attention to decentralized technologies in terms of cybersecurity and scalability.",
+      "Now, I hold the position of R&D Engineer at Fortris and am pursuing a Ph.D. at the University of Malaga in decentralized technology and its cybersecurity implications.",
+    ],
+    socials: {
+      mail: "bluebycode@gmail.com",
+      linkedin: "https://www.linkedin.com/in/bluebycode/",
+    },
+  },
 ] as const satisfies ReadonlyArray<Speaker>;
 
 export const events = [
@@ -65,6 +93,30 @@ export const events = [
     place: "auditorium",
     type: "lecture",
     speakers: ["Bezael Pérez", "Leifer Mendez"],
+    language: "Español",
+  },
+  {
+    name: "✨ Haz magia con CSS",
+    descriptionInParagraphs: [
+      "En la charla veremos hechizos de magia a modo de snippets de código CSS variados, desde arte con CSS, ilusiones ópticas, un videojuego funcional, interfaces animadas, funciones en CSS, elementos de html con los que tener funcionalidades de saque en el navegador sin necesidad de JS...",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Carmen Ansio"],
+    language: "Español",
+  },
+  {
+    name: "Under the Hood of Decentralized Technology: Examining Scalability and Security",
+    descriptionInParagraphs: [
+      "This talk examines everything no one tells you about blockchain as a decentralized distributed system: challenges of balancing security and scalability.",
+      "It covers the costs of improving performance, known challenges in blockchain platforms, and the issue of centralization in decentralized systems.",
+      "It visits the known-unknown security attacks case per case.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Alvaro Lopez Sanchez"],
     language: "Español",
   },
 ] as const satisfies ReadonlyArray<Event>;
