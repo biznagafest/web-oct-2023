@@ -10,12 +10,19 @@ const AccordionItem = ({
   return (
     <div className="flex flex-col">
       <div
-        className={`rounded-lg cursor-pointer p-4 ${
+        className={`rounded-lg flex flex-row justify-between align-middle cursor-pointer p-4 ${
           isOpen ? "bg-red-100 dark:bg-red-400" : "bg-red-50 dark:bg-red-800"
         }`}
         onClick={handleToggle}
       >
-        <span>{title}</span>
+        <span className="text-xl">{title}</span>
+        <span className="grid grid-cols-1 place-content-center">
+          {isOpen ? (
+            <i className="fa-solid fa-chevron-up"></i>
+          ) : (
+            <i className="fa-solid fa-chevron-down"></i>
+          )}
+        </span>
       </div>
       {isOpen && (
         <p className="px-4 mt-2 animate__animated animate__fadeIn">{body}</p>
@@ -25,7 +32,7 @@ const AccordionItem = ({
 };
 
 const Accordion = ({ data }: { data: ReadonlyArray<FAQ> }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleToggle = (index: number) => {
     setOpenIndex((prevOpenIndex) => (prevOpenIndex === index ? null : index));

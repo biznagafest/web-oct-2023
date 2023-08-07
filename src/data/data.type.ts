@@ -90,6 +90,11 @@ export interface Event {
   language?: Nullish<string>;
 }
 
+interface FooterLink {
+  title: string;
+  href: string;
+}
+
 export type Data = {
   title: string;
   date: Date;
@@ -97,7 +102,7 @@ export type Data = {
   about: {
     lengthInHours: number;
     attendees: number;
-    description: string;
+    descriptionInParagraphs: ReadonlyArray<string>;
     socials?: Socials;
   };
   venue: {
@@ -121,4 +126,5 @@ export type Data = {
   lastEditionVideoUrl: string;
   faq: ReadonlyArray<FAQ>;
   codeOfConduct: string;
+  footerLinks: ReadonlyArray<FooterLink>;
 };

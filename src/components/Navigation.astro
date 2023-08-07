@@ -48,20 +48,6 @@ const currentPath = pathname.slice(1); //
           <a href="/#speakers" class="px-3"> Speakers</a>
         </li>
       </If>
-      <If condition={!!DATA.sponsors.length}>
-        <li
-          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-        >
-          <a href="/#sponsors" class="px-3"> Sponsors</a>
-        </li>
-      </If>
-      <If condition={!!DATA.tickets.length}>
-        <li
-          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-        >
-          <a href="/#tickets" class="px-3">Entradas</a>
-        </li>
-      </If>
       <If condition={!!DATA.faq.length}>
         <li
           class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
@@ -69,18 +55,6 @@ const currentPath = pathname.slice(1); //
           <a href="/#faq" class="px-3">FAQ</a>
         </li>
       </If>
-      <li
-        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-      >
-        <a href="/#venue" class="px-3">Ubicación</a>
-      </li>
-      <li
-        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-      >
-        <a href="/code" class=`px-3 ${currentPath==='code' ? 'activeRoute':''}`
-          >Código de conducta</a
-        >
-      </li>
       <li
         class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
       >

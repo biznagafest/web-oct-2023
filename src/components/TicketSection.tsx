@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Ticket } from "../data/data.type";
+import { DATA } from "../data/data";
 
 const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
   const [selectedTicket, setSelectedTicket] = useState(tickets[0]);
@@ -10,8 +11,8 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
 
   return (
     <div>
-      <div className="flex flex-col-reverse md:grid md:grid-cols-[2fr_3fr] justify-between">
-        <section>
+      <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-between">
+        <section className="flex flex-col gap-4">
           {selectedTicket ? (
             <div className="flex flex-col gap-4 px-6">
               <p className="text-center md:text-left">
@@ -30,6 +31,12 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
               </h3>
             </div>
           )}
+          <a
+            className="w-fit rounded-lg bg-blue-600 py-2 px-6 text-white"
+            href={DATA.ticketsUrl}
+          >
+            Comprar Entradas
+          </a>
         </section>
 
         <section>
@@ -38,10 +45,10 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
               <article
                 key={index}
                 onClick={() => handleTicketClick(ticket)}
-                className="w-2/4 md:w-full"
+                className="w-2/4 md:w-4/5 md:mx-auto"
               >
                 <div
-                  className={`transition-all group flex flex-col border-2 rounded-lg  overflow-hidden cursor-pointer select-none ${
+                  className={`transition-all group flex flex-col border-2 rounded-2xl  overflow-hidden cursor-pointer select-none ${
                     ticket.isSoldOut
                       ? selectedTicket === ticket
                         ? "border-gray-600 hover:border-gray-600"
@@ -52,7 +59,7 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
                   } ${selectedTicket === ticket ? "scale-105" : ""}`}
                 >
                   <div className="grid content-center aspect-[3/2] bg-light-background dark:bg-dark-background dark:text-light-background">
-                    <span className=" text-center text-2xl font-semibold">
+                    <span className=" text-center text-4xl font-semibold">
                       {ticket.price} €
                     </span>
                   </div>

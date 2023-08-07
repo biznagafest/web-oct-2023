@@ -41,7 +41,11 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
 }
 ---
 
-<Layout title={DATA.title} description={DATA.about.description} lang="es">
+<Layout
+  title={DATA.title}
+  description={DATA.about.descriptionInParagraphs.join(" ")}
+  lang="es"
+>
   <header>
     <section
       id="banner"
@@ -72,32 +76,12 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
   </header>
   <main>
     <section id="value" class="bg-light-background dark:bg-dark-background">
-      <div class="container flex flex-col gap-4 md:gap-10 px-2">
-        <div class="flex flex-col lg:flex-row justify-between gap-6">
-          <p class="text-center md:text-left lg:px-0 lg:w-1/2">
-            {DATA.about.description}
-          </p>
-          <div
-            class="flex flex-col gap-2 lg:gap-6 justify-center lg:text-right pl-10 md:pl-0"
-          >
-            <AnimatedOnViewportEnter
-              animation="animate__animated animate__fadeInRight"
-            >
-              <span class="font-bold text-2xl lg:text-5xl"
-                >{DATA.about.lengthInHours} Horas de duración.</span
-              >
-            </AnimatedOnViewportEnter>
-
-            <AnimatedOnViewportEnter
-              animation="animate__animated animate__fadeInRight animate__delay-1s"
-            >
-              <span class="font-bold text-2xl lg:text-5xl"
-                >+ {DATA.about.attendees} Asistentes.</span
-              >
-            </AnimatedOnViewportEnter>
-          </div>
-        </div>
-        <Countdown date={DATA.date.toString()} client:only />
+      <div class="container flex flex-col gap-5 text-xl">
+        {
+          DATA.about.descriptionInParagraphs.map((paragraph) => (
+            <p class="text-center md:text-left lg:w-1/2">{paragraph}</p>
+          ))
+        }
       </div>
     </section>
     <If condition={!!DATA.speakers.length}>
@@ -343,15 +327,17 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
       id="last"
       class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
     >
-      <div class="container flex flex-col gap-10">
+      <div class="flex flex-col gap-10 pt-32">
         <AnimatedOnViewportEnter
           animation="animate__animated animate__fadeInLeft"
         >
-          <h2 class="text-3xl font-bold text-center md:text-left">
+          <h2
+            class="md:px-48 md:mx-auto text-3xl font-bold text-center md:text-left"
+          >
             Última Edición
           </h2>
         </AnimatedOnViewportEnter>
-        <div class="w-11/12 md:w-10/12 aspect-video mx-auto">
+        <div class="w-full aspect-video">
           <iframe
             class="w-full h-full"
             src={DATA.lastEditionVideoUrl}

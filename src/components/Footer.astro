@@ -20,71 +20,15 @@ import { DATA } from "../data/data";
   <div
     class="flex flex-row flex-wrap gap-6 align-middle justify-center md:justify-end px-2 md:px-40 w-full text-center"
   >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
-    <a class="grid grid-cols-1 place-content-center font-semibold" href="#"
-      >Test link</a
-    >
+    {
+      DATA.footerLinks.map((link) => (
+        <a
+          class="grid grid-cols-1 place-content-center font-semibold"
+          href={link.href}
+        >
+          {link.title}
+        </a>
+      ))
+    }
   </div>
 </footer>
