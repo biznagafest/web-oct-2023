@@ -7,8 +7,8 @@ import If from "../components/utils/If.astro";
 import AnimatedOnViewportEnter from "../components/utils/AnimatedOnViewportEnter.astro";
 import Accordion from "../components/Accordion";
 import TicketSection from "../components/TicketSection";
-import Countdown from "../components/Countdown";
 import type { Sponsor as ISponsor, SponsorTier } from "../data/data.type";
+import TeamMember from "../components/TeamMember.astro";
 
 function formatDate(date: Date) {
   const formatter = new Intl.DateTimeFormat("es-ES", {
@@ -76,7 +76,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
   </header>
   <main>
     <section id="value" class="bg-light-background dark:bg-dark-background">
-      <div class="container flex flex-col gap-5 text-xl">
+      <div class="container flex flex-col gap-5 text-xl px-6">
         {
           DATA.about.descriptionInParagraphs.map((paragraph) => (
             <p class="text-center md:text-left lg:w-1/2">{paragraph}</p>
@@ -89,7 +89,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
         id="speakers"
         class="bg-blue-50 dark:bg-green-800 text-dark-background dark:text-light-background"
       >
-        <div class="container flex flex-col gap-16">
+        <div class="container flex flex-col gap-16 px-6">
           <AnimatedOnViewportEnter
             animation="animate__animated animate__fadeInLeft"
           >
@@ -99,7 +99,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
           </AnimatedOnViewportEnter>
 
           <div
-            class="flex flex-col align-middle justify-center md:grid md:grid-cols-2 gap-16 md:auto-rows-fr md:place-content-center px-2"
+            class="flex flex-col align-middle justify-center md:grid md:grid-cols-2 gap-8 xl:gap-16 md:auto-rows-fr md:place-content-center px-6"
           >
             {
               DATA.speakers.map((speaker, index) => {
@@ -115,7 +115,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
         id="sponsors"
         class="bg-light-background dark:bg-dark-background"
       >
-        <div class="container flex flex-col gap-16">
+        <div class="container flex flex-col gap-16 px-6">
           <AnimatedOnViewportEnter
             animation="animate__animated animate__fadeInLeft"
           >
@@ -131,7 +131,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Platinum
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {
                   sponsors.platinum.map((sponsor) => (
@@ -149,7 +149,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Gold
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {sponsors.gold.map((sponsor) => <Sponsor sponsor={sponsor} />)}
               </article>
@@ -163,7 +163,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Silver
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {
                   sponsors.silver.map((sponsor) => (
@@ -181,7 +181,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Bronze
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {
                   sponsors.bronze.map((sponsor) => (
@@ -199,7 +199,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Media
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {sponsors.media.map((sponsor) => <Sponsor sponsor={sponsor} />)}
               </article>
@@ -213,7 +213,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Community Partners
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {
                   sponsors.community.map((sponsor) => (
@@ -231,7 +231,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Supporters
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {
                   sponsors.supporter.map((sponsor) => (
@@ -249,7 +249,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Fooding Partners
               </h3>
               <article
-                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-2"
+                class="flex flex-row flex-wrap gap-16 justify-center align-middle px-6"
               >
                 {sponsors.food.map((sponsor) => <Sponsor sponsor={sponsor} />)}
               </article>
@@ -263,7 +263,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
         id="tickets"
         class="bg-yellow-100 dark:bg-yellow-700 text-dark-background"
       >
-        <div class="container flex flex-col gap-10">
+        <div class="container flex flex-col gap-10 px-6">
           <AnimatedOnViewportEnter
             animation="animate__animated animate__fadeInLeft"
           >
@@ -284,7 +284,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
         id="faq"
         class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
       >
-        <div class="container flex flex-col gap-10">
+        <div class="container flex flex-col gap-10 px-6">
           <AnimatedOnViewportEnter
             animation="animate__animated animate__fadeInLeft"
           >
@@ -300,22 +300,71 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
       id="venue"
       class="bg-yellow-100 dark:bg-yellow-700 text-dark-background"
     >
-      <div class="flex flex-col lg:grid lg:grid-cols-[3fr_4fr] gap-10">
-        <AnimatedOnViewportEnter
-          animation="animate__animated animate__fadeInLeft"
+      <div class="flex flex-col lg:grid lg:grid-cols-2 gap-6">
+        <div
+          class="flex flex-col gap-6 md:mx-auto px-6 md:px-48 h-full pt-16 pb-28 md:pt-32 md:pb-52"
         >
-          <div
-            class="flex flex-col gap-6 md:mx-auto py-10 md:py-20 md:px-48 h-full"
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
           >
             <h2 class="text-3xl font-bold text-center md:text-left">
               Ubicación
             </h2>
+          </AnimatedOnViewportEnter>
 
-            <p class="px-2 text-center md:text-left md:px-0">
-              {DATA.venue.address}, {DATA.venue.city}
-            </p>
-          </div>
-        </AnimatedOnViewportEnter>
+          <p>Para llegar al evento puedes usar:</p>
+
+          <ul class="flex flex-col gap-6">
+            {
+              DATA.venue.howToArrive?.howToArriveByBus && (
+                <li>
+                  <AnimatedOnViewportEnter animation="animate__animated animate__fadeInLeft">
+                    <span class="text-xl font-semibold">
+                      <i class="fa-solid fa-bus" /> Autobús
+                    </span>
+                    <ul class="ml-7 list-disc list-inside">
+                      {DATA.venue.howToArrive.howToArriveByBus.map((step) => (
+                        <li>{step}</li>
+                      ))}
+                    </ul>
+                  </AnimatedOnViewportEnter>
+                </li>
+              )
+            }
+            {
+              DATA.venue.howToArrive?.howToArriveByBike && (
+                <li>
+                  <AnimatedOnViewportEnter animation="animate__animated animate__fadeInUp">
+                    <span class="text-xl font-semibold">
+                      <i class="fa-solid fa-bicycle" /> Bicicleta
+                    </span>
+                    <ul class="ml-7 list-disc list-inside">
+                      {DATA.venue.howToArrive.howToArriveByBike.map((step) => (
+                        <li>{step}</li>
+                      ))}
+                    </ul>
+                  </AnimatedOnViewportEnter>
+                </li>
+              )
+            }
+            {
+              DATA.venue.howToArrive?.howToArriveByMetro && (
+                <li>
+                  <AnimatedOnViewportEnter animation="animate__animated animate__fadeInRight">
+                    <span class="text-xl font-semibold">
+                      <i class="fa-solid fa-train-subway" /> Metro
+                    </span>
+                    <ul class="ml-7 list-disc list-inside">
+                      {DATA.venue.howToArrive.howToArriveByMetro.map((step) => (
+                        <li>{step}</li>
+                      ))}
+                    </ul>
+                  </AnimatedOnViewportEnter>
+                </li>
+              )
+            }
+          </ul>
+        </div>
         <iframe
           class="h-full w-full min-h-[600px]"
           src={DATA.venue.mapUrl}
@@ -323,29 +372,56 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-    <section
-      id="last"
-      class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
-    >
-      <div class="flex flex-col gap-10 pt-32">
-        <AnimatedOnViewportEnter
-          animation="animate__animated animate__fadeInLeft"
-        >
-          <h2
-            class="md:px-48 md:mx-auto text-3xl font-bold text-center md:text-left"
+
+    <If condition={!!DATA.lastEditionVideoUrl}>
+      <section
+        id="last"
+        class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+      >
+        <div class="pt-16 md:pt-32 flex flex-col gap-10">
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
           >
-            Última Edición
-          </h2>
-        </AnimatedOnViewportEnter>
-        <div class="w-full aspect-video">
-          <iframe
-            class="w-full h-full"
-            src={DATA.lastEditionVideoUrl}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"></iframe>
+            <h2
+              class="md:px-48 md:mx-auto text-3xl font-bold text-center md:text-left"
+            >
+              Última Edición
+            </h2>
+          </AnimatedOnViewportEnter>
+
+          <div class="w-full aspect-video">
+            <iframe
+              class="w-full h-full"
+              src={DATA.lastEditionVideoUrl}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"></iframe>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </If>
+    <If condition={!!DATA.team.length}>
+      <section
+        id="team"
+        class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+      >
+        <div class="container flex flex-col gap-10">
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
+          >
+            <h2 class="text-3xl font-bold text-center md:text-left">Equipo</h2>
+          </AnimatedOnViewportEnter>
+          <div
+            class="px-6 md:px-0 mx-auto flex flex-col md:flex-row flex-wrap gap-8 align-middle justify-center"
+          >
+            {
+              DATA.team.map((member, index) => (
+                <TeamMember member={member} index={index} />
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </If>
   </main>
 </Layout>

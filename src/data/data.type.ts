@@ -24,18 +24,10 @@ export type Speaker = {
   picture: string;
 };
 
-interface Organizer {
+export interface TeamMember {
   name: string;
   position?: Nullish<string>;
-  description?: Nullish<string>;
-  socials?: Socials;
-  picture: string;
-}
-
-interface Staff {
-  name: string;
-  position?: Nullish<string>;
-  description?: Nullish<string>;
+  descriptionInParagraphs: ReadonlyArray<string>;
   socials?: Socials;
   picture: string;
 }
@@ -74,8 +66,6 @@ export interface FAQ {
 
 interface PreviousEdition {
   name: string;
-  date: Date;
-  picture: string;
   url: string;
 }
 
@@ -99,9 +89,8 @@ export type Data = {
   title: string;
   date: Date;
   ticketsUrl: string;
+  gallery: ReadonlyArray<string>;
   about: {
-    lengthInHours: number;
-    attendees: number;
     descriptionInParagraphs: ReadonlyArray<string>;
     socials?: Socials;
   };
@@ -110,21 +99,23 @@ export type Data = {
     description: string;
     address: string;
     mapUrl: string;
-    perks: ReadonlyArray<string>;
     pictures: ReadonlyArray<string>;
     city: string;
+    howToArrive?: Nullish<
+      Partial<{
+        howToArriveByBus: ReadonlyArray<string>;
+        howToArriveByBike: ReadonlyArray<string>;
+        howToArriveByMetro: ReadonlyArray<string>;
+      }>
+    >;
   };
   speakers: ReadonlyArray<Speaker>;
-  team: {
-    organizers: ReadonlyArray<Organizer>;
-    staff: ReadonlyArray<Staff>;
-  };
+  team: ReadonlyArray<TeamMember>;
   sponsors: ReadonlyArray<Sponsor>;
   events: ReadonlyArray<Event>;
   tickets: ReadonlyArray<Ticket>;
   previousEditions: ReadonlyArray<PreviousEdition>;
-  lastEditionVideoUrl: string;
+  lastEditionVideoUrl?: Nullish<string>;
   faq: ReadonlyArray<FAQ>;
-  codeOfConduct: string;
   footerLinks: ReadonlyArray<FooterLink>;
 };

@@ -49,7 +49,7 @@ const { title, lang, description } = Astro.props;
       }
 
       .container {
-        @apply md:w-8/12 md:mx-auto pt-32 pb-52;
+        @apply md:w-8/12 md:mx-auto pt-16 pb-28 md:pt-32 md:pb-52;
       }
     </style>
   </head>
@@ -87,6 +87,9 @@ const { title, lang, description } = Astro.props;
             animationClasses.forEach((className: any) => {
               entry.target.classList.add(className);
             });
+            if (entry.target.classList.contains("invisible")) {
+              entry.target.classList.remove("invisible");
+            }
           } else if (
             !entry.isIntersecting &&
             entry.boundingClientRect.top > 0
@@ -98,7 +101,9 @@ const { title, lang, description } = Astro.props;
         });
       };
 
-      const observer = new IntersectionObserver(callback);
+      const observer = new IntersectionObserver(callback, {
+        rootMargin: "200px 0px",
+      });
 
       animations.forEach((animation) => observer.observe(animation));
     </script>

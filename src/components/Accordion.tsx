@@ -10,18 +10,18 @@ const AccordionItem = ({
   return (
     <div className="flex flex-col">
       <div
-        className={`rounded-lg flex flex-row justify-between align-middle cursor-pointer p-4 ${
+        className={`rounded-lg flex flex-row justify-between align-middle cursor-pointer gap-x-2 p-4 ${
           isOpen ? "bg-red-100 dark:bg-red-400" : "bg-red-50 dark:bg-red-800"
         }`}
         onClick={handleToggle}
       >
         <span className="text-xl">{title}</span>
         <span className="grid grid-cols-1 place-content-center">
-          {isOpen ? (
-            <i className="fa-solid fa-chevron-up"></i>
-          ) : (
-            <i className="fa-solid fa-chevron-down"></i>
-          )}
+          <i
+            className={`fa-solid fa-chevron-up transition-transform duration-150 ${
+              isOpen ? "rotate-180" : ""
+            }`}
+          ></i>
         </span>
       </div>
       {isOpen && (

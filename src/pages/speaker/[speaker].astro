@@ -25,7 +25,7 @@ const events = DATA.events.filter((event) =>
   lang="es"
 >
   <main class="flex flex-col gap-6 min-h-screen">
-    <aside class="bg-green-50 dark:bg-blue-800">
+    <aside class="bg-green-50 dark:bg-blue-800 px-6">
       <div
         class="container grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-12 md:gap-32 w-full"
       >
@@ -53,7 +53,7 @@ const events = DATA.events.filter((event) =>
       </div>
     </aside>
     <section
-      class="grid grid-cols-1 lg:grid-cols-2 p-2 pb-10 md:pb-20 md:p-20 gap-6"
+      class="grid grid-cols-1 lg:grid-cols-2 py-2 px-6 pb-10 md:py-20 gap-6"
     >
       <If condition={!!events.length}>
         {events.map((event) => <EventCard event={event} />)}

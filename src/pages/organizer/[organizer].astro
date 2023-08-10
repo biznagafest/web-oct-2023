@@ -1,0 +1,48 @@
+---
+import Socials from "../../components/Socials.astro";
+import { DATA } from "../../data/data";
+import Layout from "../../layouts/Layout.astro";
+export function getStaticPaths() {
+  return DATA.team.map((_, index) => ({
+    params: { organizer: index },
+  }));
+}
+
+const { organizer } = Astro.params;
+
+const organizerData = DATA.team[Number(organizer)];
+---
+
+<Layout
+  title={`${organizerData.name} | ${DATA.title}`}
+  description={organizerData.descriptionInParagraphs.join(" ")}
+  lang="es"
+>
+  <main class="bg-green-50 dark:bg-blue-800 px-6">
+    <div
+      class="container grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-12 md:gap-32 w-full"
+    >
+      <section class="w-80 flex-grow flex flex-col gap-6 mx-auto">
+        <img
+          class="rounded-md border-8 border-green-600 dark:border-blue-600"
+          src={organizerData.picture}
+          alt={`Picture of ${organizerData.name}`}
+        />
+        <Socials socials={organizerData.socials} />
+      </section>
+      <div class="flex flex-col gap-4">
+        <h1 class="text-6xl md:text-8xl font-bold">{organizerData.name}</h1>
+        <h3 class="text-2xl font-semibold text-orange-800">
+          {organizerData.position}
+        </h3>
+        <div class="flex flex-col gap-4 text-xl">
+          {
+            organizerData.descriptionInParagraphs.map((descPar) => (
+              <p>{descPar}</p>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

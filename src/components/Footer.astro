@@ -1,9 +1,10 @@
 ---
 import { DATA } from "../data/data";
+import If from "./utils/If.astro";
 ---
 
 <footer
-  class="flex flex-col-reverse lg:grid lg:grid-cols-[1fr_3fr] gap-10 bg-green-50 dark:bg-blue-900 text-dark-background dark:text-light-background p-10 text-center"
+  class="px-6 flex flex-col-reverse lg:grid lg:grid-cols-[1fr_3fr_1fr] gap-10 bg-green-50 dark:bg-blue-900 text-dark-background dark:text-light-background p-10 text-center"
 >
   <div class="grid grid-cols-1 place-content-center">
     <div class="w-full max-w-[250px] md:max-w-[300px] mx-auto">
@@ -17,9 +18,7 @@ import { DATA } from "../data/data";
     </div>
     <span class="font-thin text-sm">&copy; {DATA.title}</span>
   </div>
-  <div
-    class="flex flex-row flex-wrap gap-6 align-middle justify-center md:justify-end px-2 md:px-40 w-full text-center"
-  >
+  <div class="flex flex-row gap-6 align-middle justify-center flex-wrap">
     {
       DATA.footerLinks.map((link) => (
         <a
@@ -31,4 +30,22 @@ import { DATA } from "../data/data";
       ))
     }
   </div>
+  <If condition={!!DATA.previousEditions.length}>
+    <div class="flex flex-col gap-6">
+      <h6 class="text-center md:text-left font-semibold text-lg">
+        Previous Editions
+      </h6>
+      <ul
+        class="flex flex-row flex-wrap gap-3 align-middle justify-center md:justify-start"
+      >
+        {
+          DATA.previousEditions.map((prevEd) => (
+            <li>
+              <a href={prevEd.url}>{prevEd.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </If>
 </footer>
