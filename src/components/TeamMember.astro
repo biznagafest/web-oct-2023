@@ -1,0 +1,20 @@
+---
+import type { TeamMember } from "../data/data.type";
+interface Props {
+  member: TeamMember;
+  index: number;
+}
+
+const { member, index } = Astro.props;
+---
+
+<a href={`/organizer/${index}`}>
+  <span class="flex flex-col h-fit gap-6 w-[200px]">
+    <img
+      class="shadow-lg rounded-lg border-4 border-blue-600 aspect-square object-cover h-fit mx-auto"
+      src={member.picture}
+      alt={`Picture of ${member.name}`}
+    />
+    <h4 class="text-2xl font-semibold text-center">{member.name}</h4>
+  </span>
+</a>

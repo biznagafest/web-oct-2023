@@ -14,7 +14,7 @@ const { speaker, index } = Astro.props;
   class="flex flex-col align-middle justify-center lg:grid lg:grid-cols-[1fr_3fr] lg:gap-5 mx-auto"
 >
   <div
-    class="self-center grid place-content-center w-full max-w-[200px] aspect-square mx-auto rounded-full overflow-hidden border-4 md:border-8 border-blue-600 dark:border-green-600"
+    class="self-center grid place-content-center w-full max-w-[200px] aspect-square mx-auto rounded-full overflow-hidden border-4 md:border-8 border-blue-600 dark:border-green-600 shadow-md"
   >
     <a href={`/speaker/${index}`}>
       <img
@@ -26,15 +26,12 @@ const { speaker, index } = Astro.props;
     </a>
   </div>
   <div
-    class="flex flex-col align-middle justify-evenly py-[0px] text-center lg:text-left"
+    class="flex flex-col align-middle justify-center gap-3 py-[0px] text-center lg:text-left"
   >
     <h4 class="text-2xl font-bold">{speaker.name}</h4>
 
     <If condition={speaker.position !== undefined}>
       <span class="text-sm">{speaker.position}</span>
     </If>
-    <div class="min-h-[32px]">
-      <Socials socials={speaker.socials} />
-    </div>
   </div>
 </div>
