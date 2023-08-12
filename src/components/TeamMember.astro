@@ -8,13 +8,17 @@ interface Props {
 const { member, index } = Astro.props;
 ---
 
-<a href={`/organizer/${index}`}>
-  <span class="flex flex-col h-fit gap-6 w-[200px]">
+<a href={`/organizer/${index}`} class="w-[300px] aspect-square">
+  <span class={`relative flex flex-col h-full w-full`}>
     <img
-      class="shadow-lg rounded-lg border-4 border-blue-600 aspect-square object-cover h-fit mx-auto"
+      class="object-cover h-full"
       src={member.picture}
       alt={`Picture of ${member.name}`}
     />
-    <h4 class="text-2xl font-semibold text-center">{member.name}</h4>
+    <h4
+      class="backdrop-grayscale backdrop-blur-sm absolute bottom-0 left-0 w-full text-2xl font-semibold text-center bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background p-2 bg-opacity-50 dark:bg-opacity-50"
+    >
+      {member.name}
+    </h4>
   </span>
 </a>
