@@ -56,9 +56,13 @@ const { title, lang, description } = Astro.props;
   <body
     class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
   >
-    <Navigation />
-    <div class="overflow-hidden"><slot /></div>
-    <Footer />
+    <div class="overflow-hidden min-h-screen flex flex-col justify-between">
+      <div>
+        <Navigation />
+        <slot />
+      </div>
+      <Footer />
+    </div>
     <script>
       const html = document.documentElement;
       if (!!localStorage.getItem("dark")) {

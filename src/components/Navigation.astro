@@ -2,8 +2,6 @@
 import { DATA } from "../data/data";
 import DarkModeToggleButton from "./DarkModeToggleButton.astro";
 import If from "./utils/If.astro";
-const pathname = new URL(Astro.request.url)?.pathname;
-const currentPath = pathname.slice(1); //
 ---
 
 <nav
@@ -65,9 +63,7 @@ const currentPath = pathname.slice(1); //
           >Comprar entradas</a
         >
       </li>
-      <li
-        class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-      >
+      <li class="grid place-content-center">
         <DarkModeToggleButton />
       </li>
     </ul>
