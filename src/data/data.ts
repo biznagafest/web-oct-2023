@@ -295,7 +295,7 @@ const team = [
   {
     name: "Jose Antonio Palacios",
     // TODO
-    picture: "/fallback/person.png",
+    picture: "/team/jose-palacios.jpeg",
     position: "Software Engineer Lead, Vodafone",
     socials: {
       twitter: "https://twitter.com/JoseAntPR",
@@ -307,7 +307,7 @@ const team = [
   {
     name: "Carlos Caballero",
     // TODO
-    picture: "/fallback/person.png",
+    picture: "/team/carlos-caballero.jpeg",
     descriptionInParagraphs: [
       "Es ingeniero informático y doctor en informática de la Universidad de Málaga.",
       "Máster en Ingeniería de Software y en Inteligencia Artificial.",
@@ -325,7 +325,7 @@ const team = [
   {
     name: "Jose Barrera",
     // TODO
-    picture: "/fallback/person.png",
+    picture: "/team/jose-barrera.jpeg",
     position: "Digital Product Designer at Fortris",
     socials: {
       twitter: "https://twitter.com/joseabarreram",
@@ -351,7 +351,7 @@ const team = [
   {
     name: "Inma Ortega",
     // TODO
-    picture: "/fallback/person.png",
+    picture: "/team/inma-ortega.jpeg",
     descriptionInParagraphs: [
       "Graduada en periodismo, es técnica en Comunicación Corporativa, PR y especialista en Social Media Marketing.",
       "Tiene un gran interes sobre sector tecnológico, que tan en boga está en Málaga y está siendo un revulsivo en el tejido social y económico en la provincia.",
@@ -364,7 +364,7 @@ const team = [
   {
     name: "Daniel Olivet",
     // TODO
-    picture: "/fallback/person.png",
+    picture: "/team/dani-olivet.jpeg",
     descriptionInParagraphs: [
       "Desarrollador de software malagueño.",
       "Estudió ASIR y por afición pura acabó desarrollando webs.",
