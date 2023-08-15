@@ -387,8 +387,8 @@ export const DATA: Data = {
   date: new Date(2023, 9, 28),
   about: {
     descriptionInParagraphs: [
-      'El BiznagaFest es el gran evento IT de la Costa del Sol para las comunidades "Google developers" de España, que se reúnen para ofrecer conferencias y workshops sobre Devops, Backend, Fronted, Chatbots, IA, Blockchain y soft skills.',
-      "En sus ediciones anteriores han pasado grandes expertos que trabajan en las principales empresas tecnológicas tanto nacionales e internacionales, como Google, Virus Total, Deloitte, Red Hat, Chainalysis, Sngular, entre otros.",
+      'El BiznagaFest es el gran evento IT de la Costa del Sol para las comunidades "Google developers" de España, que se reúnen para ofrecer conferencias y workshops sobre Devops, Backend, Frontend, Chatbots, IA, Blockchain y soft skills.',
+      "En sus ediciones anteriores han pasado grandes expertos que trabajan en las principales empresas tecnológicas nacionales e internacionales, como Google, Virus Total, Deloitte, Red Hat, Chainalysis, Sngular, entre otros.",
     ],
     socials: {
       instagram: "https://www.instagram.com/biznagafest/",
