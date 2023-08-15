@@ -64,7 +64,7 @@ export const speakers = [
   {
     name: "Álvaro López Sánchez",
     position: "R&D Engineer / Innovation, Fortris",
-    picture: "/fallback/person.png",
+    picture: "/speakers/alvaro-lopez.jpeg",
     descriptionParagraphs: [
       "+10 yrs of expertise as a software engineer in the video game industry.",
       "In recent years, I turned his attention to decentralized technologies in terms of cybersecurity and scalability.",
