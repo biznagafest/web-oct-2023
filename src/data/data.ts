@@ -324,7 +324,6 @@ const team = [
   },
   {
     name: "Jose Barrera",
-    // TODO
     picture: "/team/jose-barrera.jpeg",
     position: "Digital Product Designer at Fortris",
     socials: {
@@ -350,7 +349,6 @@ const team = [
   },
   {
     name: "Inma Ortega",
-    // TODO
     picture: "/team/inma-ortega.jpeg",
     descriptionInParagraphs: [
       "Graduada en periodismo, es técnica en Comunicación Corporativa, PR y especialista en Social Media Marketing.",
@@ -363,7 +361,6 @@ const team = [
   },
   {
     name: "Daniel Olivet",
-    // TODO
     picture: "/team/dani-olivet.jpeg",
     descriptionInParagraphs: [
       "Desarrollador de software malagueño.",
@@ -374,6 +371,19 @@ const team = [
     socials: {
       linkedin: "https://www.linkedin.com/in/daniel-olivet-jimenez/",
       github: "https://github.com/daniolivet",
+    },
+  },
+  {
+    name: "Alba Ruiz",
+    picture: "/team/alba-ruiz.jpg",
+    descriptionInParagraphs: [
+      "Alba Ruiz es estudiante de ingeniería del Sofware en la Universidad de Málaga, Google Developer Student Club Lead y Women Techmakers Ambassador.",
+    ],
+    position: "GDSC Málaga",
+    socials: {
+      linkedin:
+        "https://www.linkedin.com/in/alba-ruiz-guti%C3%A9rrez-63851b20a/",
+      twitter: "https://twitter.com/AlbaRuizGutirr1",
     },
   },
 ] as const satisfies ReadonlyArray<TeamMember>;
