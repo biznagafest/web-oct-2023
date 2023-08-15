@@ -224,6 +224,13 @@ export const sponsors = [
     description: "Code Space Academy",
   },
   {
+    name: "DotTech",
+    picture: "/sponsors/communities/dottech.svg",
+    tier: "community",
+    url: "https://www.youtube.com/@DotTechES",
+    description: "Dottech",
+  },
+  {
     name: "Angular Málaga",
     picture: "/sponsors/communities/angularmalaga.svg",
     tier: "community",
