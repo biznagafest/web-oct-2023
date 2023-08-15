@@ -225,7 +225,7 @@ export const sponsors = [
   },
   {
     name: "Angular Málaga",
-    picture: "/sponsors/communities/angularmalaga.png",
+    picture: "/sponsors/communities/angularmalaga.svg",
     tier: "community",
     url: "https://angularmalaga.com/",
     description: "Angular Málaga",
