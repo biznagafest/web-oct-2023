@@ -433,7 +433,7 @@ export const DATA: Data = {
         "El Campus cuenta con un carril bici que comienza en el Paseo del Parque y llega al Boulevar Louis Pasteur",
       ],
       howToArriveByMetro: [
-        "El Campus cuenta con un carril bici que comienza en el Paseo del Parque y llega al Boulevar Louis Pasteur",
+        "Línea 1 (Andalucía Tech - El Perchel) - Parada Hospital Clínico",
       ],
     },
   },
