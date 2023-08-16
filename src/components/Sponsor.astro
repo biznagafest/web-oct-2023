@@ -13,6 +13,7 @@ const { sponsor } = Astro.props;
   class={`transition-all grid place-content-center hover:scale-110 grayscale hover:grayscale-0`}
 >
   <img
+    loading="lazy"
     src={sponsor.picture}
     alt=`Logo of ${sponsor.name}`
     class={`${

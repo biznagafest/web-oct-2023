@@ -11,6 +11,7 @@ const { member, index } = Astro.props;
 <a href={`/organizer/${index}`} class="w-full max-w-[300px] aspect-square">
   <span class={`relative flex flex-col h-full w-full`}>
     <img
+      loading="lazy"
       class="object-cover h-full"
       src={member.picture}
       alt={`Picture of ${member.name}`}
