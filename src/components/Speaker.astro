@@ -17,6 +17,7 @@ const { speaker, index } = Astro.props;
   >
     <a href={`/speaker/${index}`}>
       <img
+        loading="lazy"
         src={speaker.picture}
         alt=`Picture of ${speaker.name}`
         class="object-cover select-none mx-auto"
