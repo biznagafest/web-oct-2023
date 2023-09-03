@@ -92,6 +92,19 @@ export const tickets = [
     ],
   },
   {
+    name: "General",
+    price: 18,
+    url: "https://example.com/ticket1",
+    perks: [
+      "Acceso al área reservado de patrocinadores",
+      "Coffee Break (varios)",
+      "Almuerzo",
+      "Café durante todo el día",
+      "Regalos valorados en 15€",
+      "Sorteos valorados en 300€",
+    ],
+  },
+  {
     name: "Summer",
     price: 15.5,
     url: "https://example.com/ticket1",
@@ -103,7 +116,7 @@ export const tickets = [
       "Regalos valorados en 15€",
       "Sorteos valorados en 300€",
     ],
-    notice: "Hasta 1 de septiembre.",
+    isSoldOut: true,
   },
   {
     name: "Early Bird",
