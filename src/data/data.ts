@@ -105,7 +105,9 @@ export const speakers = [
     position: "Chief Software Engineer",
     picture: "/speakers/denisov.png",
     descriptionParagraphs: [
-      "Sasha is an experienced software developer with a rich background, in IT for more than 20 years.He worked with different stacks in backend, frontend and mobile fields, but since 2018 his main interest is Flutter.Sasha is a Chief Software Engineer and Head of Flutter Discipline in EPAM Systems.Also, he is Flutter and Dart GDE and Co- Organizer of Flutter Berlin community."
+      "Sasha is an experienced software developer with a rich background, in IT for more than 20 years.",
+      "He worked with different stacks in backend, frontend and mobile fields, but since 2018 his main interest is Flutter.Sasha is a Chief Software Engineer and Head of Flutter Discipline in EPAM Systems.",
+      "Also, he is Flutter and Dart GDE and Co- Organizer of Flutter Berlin community."
     ],
     socials: {
       mail: "denisov.shureg@gmail.com",
@@ -114,8 +116,8 @@ export const speakers = [
   },
   {
     name: "Alix Martínez Martínez",
-    position: "",
-    picture: "/speakers/alix.jpeg",
+    position: "Design Leader, Miro",
+    picture: "/speakers/alix.jpg",
     descriptionParagraphs: [
     ],
     socials: {
@@ -126,7 +128,7 @@ export const speakers = [
   },
   {
     name: "Juan Manuel Real Garry",
-    position: "",
+    position: "Product Design Manager, Miro",
     picture: "/speakers/juanreal.jpeg",
     descriptionParagraphs: [
     ],
@@ -201,7 +203,8 @@ export const events = [
   {
     name: "A Developer Journey",
     descriptionInParagraphs: [
-      '¿Sabes qué además de la UX existe toda una ciencia detrás de la Experiencia de Developers y otras personas que trabajan en empresas tech? Si tu empresa "presume" de cuidar bien a quienes trabajan en ella , seguro que tiene expertas y expertos en #EX (Employee Xperience) que trabajan para que tu día a día y la cultura de tu organización sea un éxito...o deberían.'
+      '¿Sabes qué además de la UX existe toda una ciencia detrás de la Experiencia de Developers y otras personas que trabajan en empresas tech?',
+      'Si tu empresa "presume" de cuidar bien a quienes trabajan en ella, seguro que tiene expertas y expertos en #EX(Employee Xperience) que trabajan para que tu día a día y la cultura de tu organización sea un éxito...o deberían.'
     ],
     durationInMinutes: 45,
     place: "auditorium",
@@ -224,7 +227,9 @@ export const events = [
   {
     name: "Compose Flutter Modules in your Android App",
     descriptionInParagraphs: [
-      "Explore the process of embedding Flutter into existing Android applications in this live coding session.Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy.Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills."
+      "Explore the process of embedding Flutter into existing Android applications in this live coding session.",
+      "Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy.",
+      "Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills."
     ],
     durationInMinutes: 45,
     place: "auditorium",
