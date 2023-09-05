@@ -75,6 +75,79 @@ export const speakers = [
       linkedin: "https://www.linkedin.com/in/bluebycode/",
     },
   },
+  {
+    name: "Irene M Morgado",
+    position: "Head of Brand & Culture, Kairós Digital Solutions",
+    picture: "/speakers/irene.jpg",
+    descriptionParagraphs: [
+    ],
+    socials: {
+      mail: "irenemmorgado@gmail.com",
+      linkedin: "https://www.linkedin.com/in/irenemmorgado/",
+    },
+  },
+  {
+    name: "Francisco Guerrero",
+    position: "QA Manager & QA Coach",
+    picture: "/speakers/fran-guerrero.jpeg",
+    descriptionParagraphs: [
+      "Fran Guerrero es un especialista certificado en Agile ISTQB con más de 12 años de experiencia en el campo de la Calidad del Software.",
+      "Implementa procesos de prueba, estrategias de control de calidad, herramientas innovadoras y construye relaciones sólidas en todos los equipos.Su objetivo siempre es que su equipo se convierta en una parte esencial del proceso de Calidad del Software",
+      "De vez en cuando, le gusta hablar en foros relacionados con QA y Testing sobre temas que incluyen Metodologías Ágiles, Test Automation y DevOps CI / CD."
+    ],
+    socials: {
+      mail: "fran.guerrero.sanchez@gmail.com",
+      linkedin: "https://www.linkedin.com/in/franguerrero/",
+    },
+  },
+  {
+    name: "Sasha Denisov",
+    position: "Chief Software Engineer",
+    picture: "/speakers/denisov.png",
+    descriptionParagraphs: [
+      "Sasha is an experienced software developer with a rich background, in IT for more than 20 years.",
+      "He worked with different stacks in backend, frontend and mobile fields, but since 2018 his main interest is Flutter.Sasha is a Chief Software Engineer and Head of Flutter Discipline in EPAM Systems.",
+      "Also, he is Flutter and Dart GDE and Co- Organizer of Flutter Berlin community."
+    ],
+    socials: {
+      mail: "denisov.shureg@gmail.com",
+      twitter: "https://twitter.com/ShuregDenisov",
+    },
+  },
+  {
+    name: "Alix Martínez Martínez",
+    position: "Design Leader, Miro",
+    picture: "/speakers/alix.jpg",
+    descriptionParagraphs: [
+    ],
+    socials: {
+      mail: "info@alixmzmz.eu",
+      website: "https://www.alixmzmz.eu/",
+      linkedin: "https://www.linkedin.com/in/alix-mart%C3%ADnez-mart%C3%ADnez-60037b19/"
+    },
+  },
+  {
+    name: "Juan Manuel Real Garry",
+    position: "Product Design Manager, Miro",
+    picture: "/speakers/juanreal.jpeg",
+    descriptionParagraphs: [
+    ],
+    socials: {
+      mail: "pheurton@gmail.com",
+      website: "https://juanreal.com/",
+      linkedin: "https://www.linkedin.com/in/juanreal/"
+    },
+  },
+  {
+    name: "Albert Sunyer",
+    position: "Technical Account Manager",
+    picture: "/speakers/albert.jpeg",
+    descriptionParagraphs: [
+    ],
+    socials: {
+      mail: "sunyer@google.com"
+    },
+  },
 ] as const satisfies ReadonlyArray<Speaker>;
 
 export const events = [
@@ -125,6 +198,65 @@ export const events = [
     place: "auditorium",
     type: "lecture",
     speakers: ["Álvaro López Sánchez"],
+    language: "Español",
+  },
+  {
+    name: "A Developer Journey",
+    descriptionInParagraphs: [
+      '¿Sabes qué además de la UX existe toda una ciencia detrás de la Experiencia de Developers y otras personas que trabajan en empresas tech?',
+      'Si tu empresa "presume" de cuidar bien a quienes trabajan en ella, seguro que tiene expertas y expertos en #EX(Employee Xperience) que trabajan para que tu día a día y la cultura de tu organización sea un éxito...o deberían.'
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Irene M Morgado"],
+    language: "Español",
+  },
+  {
+    name: "API Testing con herramientas CI/CD",
+    descriptionInParagraphs: [
+      "Las pruebas de API han sido un desafío para los probadores y herramientas como Postman han facilitado esta tarea gracias a la creación manual de colecciones de solicitudes. Pero, ¿cómo podemos configurar pruebas automatizadas de API usando Postman y lanzar estas pruebas en contenedores? No solo eso, sino también integrarlos en nuestras canalizaciones de CI/CD.",
+      "En esta charla, Fran Guerrero explorará 3 puntos clave en la automatización de pruebas API con herramientas habituales como Postman: es decir, la creación de pruebas automatizadas desde Postman, cómo ejecutar tus recopilaciones de solicitudes y sus pruebas automatizadas usando Docker, así como los contenedores adecuados.para ellos y cómo las pruebas de API se integran en una canalización de CI / CD de una manera sencilla usando GitlabCI."
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "workshop",
+    speakers: ["Francisco Guerrero"],
+    language: "Español",
+  },
+  {
+    name: "Compose Flutter Modules in your Android App",
+    descriptionInParagraphs: [
+      "Explore the process of embedding Flutter into existing Android applications in this live coding session.",
+      "Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy.",
+      "Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills."
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "workshop",
+    speakers: ["Sasha Denisov"],
+    language: "English",
+  },
+  {
+    name: "Creatividad en la era de la IA: ¿Existe realmente la posibilidad de ser original?",
+    descriptionInParagraphs: [
+      "En esta charla profundizaremos en analíticas, anécdotas, caminos, herramientas prácticas y personas detrás del #EX, hablando concretamente del sector Tech."
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Juan Manuel Real Garry", "Alix Martínez Martínez"],
+    language: "Español",
+  },
+  {
+    name: "ML API Skills",
+    descriptionInParagraphs: [
+      "In this game you will combine Vision API, Translation API, and Natural Language API, analyze images with the Vision API, perform text analysis with the Cloud Natural Language API, and use Kubernetes and Cloud Vision API to classify images from Reddit's /r/aww subreddit and displayed the results in a web app."
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "workshop",
+    speakers: ["Albert Sunyer"],
     language: "Español",
   },
 ] as const satisfies ReadonlyArray<Event>;
