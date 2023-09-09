@@ -400,10 +400,10 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
         </div>
       </section>
     </If>
-    <If condition={!!DATA.team.length}>
+    <If condition={!!DATA.team.organizers.length}>
       <section
         id="team"
-        class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+        class="bg-blue-50 dark:bg-green-800 text-dark-background dark:text-light-background"
       >
         <div class="container flex flex-col gap-10 px-6">
           <AnimatedOnViewportEnter
@@ -415,7 +415,32 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
             class="px-6 md:px-0 mx-auto flex flex-row flex-wrap gap-2 align-middle justify-center w-full"
           >
             {
-              DATA.team.map((member, index) => (
+              DATA.team.organizers.map((member, index) => (
+                <TeamMember member={member} index={index} />
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </If>
+    <If condition={!!DATA.team.staff.length}>
+      <section
+        id="staff"
+        class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
+      >
+        <div class="container flex flex-col gap-10 px-6">
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
+          >
+            <h2 class="text-3xl font-bold text-center md:text-left">
+              Voluntarios
+            </h2>
+          </AnimatedOnViewportEnter>
+          <div
+            class="px-6 md:px-0 mx-auto flex flex-row flex-wrap gap-2 align-middle justify-center w-full"
+          >
+            {
+              DATA.team.staff.map((member, index) => (
                 <TeamMember member={member} index={index} />
               ))
             }
