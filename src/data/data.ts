@@ -4,6 +4,7 @@ import type {
   FAQ,
   Speaker,
   Sponsor,
+  Team,
   TeamMember,
   Ticket,
 } from "./data.type";
@@ -231,92 +232,95 @@ const faq = [
   },
 ] as const satisfies ReadonlyArray<FAQ>;
 
-const team = [
-  {
-    name: "Jose Antonio Palacios",
-    // TODO
-    picture: "/fallback/person.png",
-    position: "Software Engineer Lead, Vodafone",
-    socials: {
-      twitter: "https://twitter.com/JoseAntPR",
-      github: "https://github.com/JoseAntpr",
-      linkedin: "https://www.linkedin.com/in/joseantpalacios/",
+const team = {
+  organizers: [
+    {
+      name: "Jose Antonio Palacios",
+      // TODO
+      picture: "/fallback/person.png",
+      position: "Software Engineer Lead, Vodafone",
+      socials: {
+        twitter: "https://twitter.com/JoseAntPR",
+        github: "https://github.com/JoseAntpr",
+        linkedin: "https://www.linkedin.com/in/joseantpalacios/",
+      },
+      descriptionInParagraphs: [],
     },
-    descriptionInParagraphs: [],
-  },
-  {
-    name: "Carlos Caballero",
-    // TODO
-    picture: "/fallback/person.png",
-    descriptionInParagraphs: [
-      "Carlos Caballero González es ingeniero informático y doctor en informática de la Universidad de Málaga.",
-      "Máster en Ingeniería de Software y en Inteligencia Artificial.",
-      "Google Developer Experts en Angular.",
-    ],
-    position: "Angular Google Developer Expert (GDE)",
-    socials: {
-      twitter: "https://twitter.com/carlillo",
-      website: "https://www.carloscaballero.io/",
-      github: "https://github.com/caballerog",
-      linkedin: "https://www.linkedin.com/in/carloscaballerogonzalez/",
-      youtube: "https://www.youtube.com/c/DotTechES",
+    {
+      name: "Carlos Caballero",
+      // TODO
+      picture: "/fallback/person.png",
+      descriptionInParagraphs: [
+        "Carlos Caballero González es ingeniero informático y doctor en informática de la Universidad de Málaga.",
+        "Máster en Ingeniería de Software y en Inteligencia Artificial.",
+        "Google Developer Experts en Angular.",
+      ],
+      position: "Angular Google Developer Expert (GDE)",
+      socials: {
+        twitter: "https://twitter.com/carlillo",
+        website: "https://www.carloscaballero.io/",
+        github: "https://github.com/caballerog",
+        linkedin: "https://www.linkedin.com/in/carloscaballerogonzalez/",
+        youtube: "https://www.youtube.com/c/DotTechES",
+      },
     },
-  },
-  {
-    name: "Jose Barrera",
-    // TODO
-    picture: "/fallback/person.png",
-    position: "Digital Product Designer at Fortris",
-    socials: {
-      twitter: "https://twitter.com/joseabarreram",
-      linkedin: "https://www.linkedin.com/in/joseabarreram/",
+    {
+      name: "Jose Barrera",
+      // TODO
+      picture: "/fallback/person.png",
+      position: "Digital Product Designer at Fortris",
+      socials: {
+        twitter: "https://twitter.com/joseabarreram",
+        linkedin: "https://www.linkedin.com/in/joseabarreram/",
+      },
+      descriptionInParagraphs: [],
     },
-    descriptionInParagraphs: [],
-  },
-  {
-    name: "David Rojo",
-    picture: "/team/david-rojo.png",
-    descriptionInParagraphs: [
-      "David Rojo es un desarrollador de software especializado en tecnologías web como NestJs y Angular.",
-      "Con gran interes en la comunidad y en proyectos open source.",
-    ],
-    position: "Software Developer, Max Gain Development",
-    socials: {
-      twitter: "https://twitter.com/davidrojom",
-      website: "https://davidrojom.vercel.app/",
-      github: "https://github.com/DavidRojoM",
-      linkedin: "https://www.linkedin.com/in/davidrojom/",
+    {
+      name: "David Rojo",
+      picture: "/team/david-rojo.png",
+      descriptionInParagraphs: [
+        "David Rojo es un desarrollador de software especializado en tecnologías web como NestJs y Angular.",
+        "Con gran interes en la comunidad y en proyectos open source.",
+      ],
+      position: "Software Developer, Max Gain Development",
+      socials: {
+        twitter: "https://twitter.com/davidrojom",
+        website: "https://davidrojom.vercel.app/",
+        github: "https://github.com/DavidRojoM",
+        linkedin: "https://www.linkedin.com/in/davidrojom/",
+      },
     },
-  },
-  {
-    name: "Inma Ortega",
-    // TODO
-    picture: "/fallback/person.png",
-    descriptionInParagraphs: [
-      "Graduada en periodismo, es técnica en Comunicación Corporativa, PR y especialista en Social Media Marketing.",
-      "Tiene un gran interes sobre sector tecnológico, que tan en boga está en Málaga y está siendo un revulsivo en el tejido social y económico en la provincia.",
-    ],
-    position: "Community Manager, ComparteMedios",
-    socials: {
-      linkedin: "https://www.linkedin.com/in/inmaculadaortegamartin/",
+    {
+      name: "Inma Ortega",
+      // TODO
+      picture: "/fallback/person.png",
+      descriptionInParagraphs: [
+        "Graduada en periodismo, es técnica en Comunicación Corporativa, PR y especialista en Social Media Marketing.",
+        "Tiene un gran interes sobre sector tecnológico, que tan en boga está en Málaga y está siendo un revulsivo en el tejido social y económico en la provincia.",
+      ],
+      position: "Community Manager, ComparteMedios",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/inmaculadaortegamartin/",
+      },
     },
-  },
-  {
-    name: "Daniel Olivet",
-    // TODO
-    picture: "/fallback/person.png",
-    descriptionInParagraphs: [
-      "Desarrollador de software malagueño.",
-      "Estudió ASIR y por afición pura acabó desarrollando webs.",
-      "Especializado en entornos LAMP, con gran interés en nuevas tecnologías y en clean code.",
-    ],
-    position: "Desarrollador Backend, Bulevip",
-    socials: {
-      linkedin: "https://www.linkedin.com/in/daniel-olivet-jimenez/",
-      github: "https://github.com/daniolivet",
+    {
+      name: "Daniel Olivet",
+      // TODO
+      picture: "/fallback/person.png",
+      descriptionInParagraphs: [
+        "Desarrollador de software malagueño.",
+        "Estudió ASIR y por afición pura acabó desarrollando webs.",
+        "Especializado en entornos LAMP, con gran interés en nuevas tecnologías y en clean code.",
+      ],
+      position: "Desarrollador Backend, Bulevip",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/daniel-olivet-jimenez/",
+        github: "https://github.com/daniolivet",
+      },
     },
-  },
-] as const satisfies ReadonlyArray<TeamMember>;
+  ],
+  staff: [],
+} as const satisfies Team;
 
 const gallery: string[] = [];
 

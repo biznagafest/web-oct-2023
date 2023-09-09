@@ -32,6 +32,11 @@ export interface TeamMember {
   picture: string;
 }
 
+export interface Team {
+  organizers: ReadonlyArray<TeamMember>;
+  staff: ReadonlyArray<TeamMember>;
+}
+
 export type SponsorTier =
   | "platinum"
   | "gold"
@@ -110,7 +115,7 @@ export type Data = {
     >;
   };
   speakers: ReadonlyArray<Speaker>;
-  team: ReadonlyArray<TeamMember>;
+  team: Team;
   sponsors: ReadonlyArray<Sponsor>;
   events: ReadonlyArray<Event>;
   tickets: ReadonlyArray<Ticket>;
