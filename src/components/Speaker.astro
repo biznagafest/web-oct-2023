@@ -12,13 +12,12 @@ const { speaker, index } = Astro.props;
 <div
   class="flex flex-col align-middle justify-center lg:grid lg:grid-cols-[2fr_3fr] lg:gap-5 mx-auto"
 >
-  <a href={`/speaker/${index}`}>
+  <a href={`/speaker/${index}`} class="w-[200px] h-[200px] mx-auto">
     <img
       loading="lazy"
       src={speaker.picture}
       alt=`Picture of ${speaker.name}`
-      class="object-cover select-none mx-auto
-        border-4 md:border-8 border-blue-600 dark:border-green-600 shadow-md rounded-full aspect-square max-w-[200px]"
+      class="object-cover select-none mx-auto border-4 md:border-8 border-blue-600 dark:border-green-600 shadow-md rounded-full aspect-square w-[200px] h-[200px]"
       style="-webkit-user-drag: none;"
     />
   </a>
