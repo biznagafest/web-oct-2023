@@ -416,7 +416,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
           >
             {
               DATA.team.organizers.map((member, index) => (
-                <TeamMember member={member} index={index} />
+                <TeamMember kind="organizer" member={member} index={index} />
               ))
             }
           </div>
@@ -441,7 +441,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
           >
             {
               DATA.team.staff.map((member, index) => (
-                <TeamMember member={member} index={index} />
+                <TeamMember kind="staff" member={member} index={index} />
               ))
             }
           </div>
