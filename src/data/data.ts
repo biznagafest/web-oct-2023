@@ -148,6 +148,18 @@ export const speakers = [
       mail: "sunyer@google.com"
     },
   },
+  {
+    name: "Alba Rivas",
+    position: "Principal Developer Advocate at Salesforce",
+    picture: "/speakers/albarivas.jpeg",
+    descriptionParagraphs: [
+    ],
+    socials: {
+      twitter: "https://twitter.com/AlbaSFDC",
+      linkedin: "https://www.linkedin.com/in/alba-rivas/",
+      mail: "alba.azconarivas@gmail.com"
+    },
+  },
 ] as const satisfies ReadonlyArray<Speaker>;
 
 export const events = [
@@ -257,6 +269,18 @@ export const events = [
     place: "auditorium",
     type: "workshop",
     speakers: ["Albert Sunyer"],
+    language: "Español",
+  },
+  {
+    name: "¿Salesforce Developer?¿Quééé?",
+    descriptionInParagraphs: [
+      "El rol de Salesforce Developer está altamente demandado en el mercado laboral, pero a la vez, es un gran desconocido.",
+      "En esta sesión os contaré a qué se dedica un Salesforce Developer, veremos qué lenguajes y herramientas se utilizan para crear aplicaciones en Salesforce, y, desde mi experiencia personal, os contaré las ventajas y retos que os podéis encontrar en el camino."
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Alba Rivas"],
     language: "Español",
   },
 ] as const satisfies ReadonlyArray<Event>;
