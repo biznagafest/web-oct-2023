@@ -31,12 +31,12 @@ export type ScheduleEvent = {
   subtitle?: Nullish<string>;
   description?: Nullish<string>;
   type?: Nullish<"lecture" | "workshop">;
-}
+};
 
 export type Schedule = {
   type: "break" | "no-break";
   events: ScheduleEvent[];
-}
+};
 
 export interface TeamMember {
   name: string;
@@ -44,6 +44,11 @@ export interface TeamMember {
   descriptionInParagraphs: ReadonlyArray<string>;
   socials?: Socials;
   picture: string;
+}
+
+export interface Team {
+  organizers: ReadonlyArray<TeamMember>;
+  staff: ReadonlyArray<TeamMember>;
 }
 
 export type SponsorTier =
@@ -125,7 +130,7 @@ export type Data = {
   };
   speakers: ReadonlyArray<Speaker>;
   schedules: ReadonlyArray<Schedule>;
-  team: ReadonlyArray<TeamMember>;
+  team: Team;
   sponsors: ReadonlyArray<Sponsor>;
   events: ReadonlyArray<Event>;
   tickets: ReadonlyArray<Ticket>;
