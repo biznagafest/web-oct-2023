@@ -116,9 +116,14 @@ export const speakers = [
   },
   {
     name: "Alix Martínez Martínez",
-    position: "Design Leader, Miro",
+    position: "Product design manager, Miro & ONUT",
     picture: "/speakers/alix.jpg",
-    descriptionParagraphs: [],
+    descriptionParagraphs: [
+      "ONUT son Alix Martínez y Juan Real. Dos artistas multimedia residentes en los Países Bajos. Colaboran como ONUT desde 2016.",
+      "Más de 20 años de experiencia en los campos de Diseño, Tecnología e Innovación.",
+      "Desde startups a grandes corporaciones. Marcas como Fjord, Accenture, Vodafone, Ubuntu, Barclays, Tesco, Transport for London, Halifax, COS-H&M... Actualmente, ambos trabajan en Miro redefiniendo el espacio de la colaboración visual en grupo.",
+      "ONUT es su vehículo de expresión. A través de su práctica artística reflexionan sobre el mundo en el que vivimos y cómo la tecnología afecta el comportamiento humano.",
+    ],
     socials: {
       mail: "info@alixmzmz.eu",
       website: "https://www.alixmzmz.eu/",
@@ -128,9 +133,14 @@ export const speakers = [
   },
   {
     name: "Juan Manuel Real Garry",
-    position: "Product Design Manager, Miro",
+    position: "Product design manager, Miro & ONUT",
     picture: "/speakers/juanreal.jpeg",
-    descriptionParagraphs: [],
+    descriptionParagraphs: [
+      "ONUT son Alix Martínez y Juan Real. Dos artistas multimedia residentes en los Países Bajos. Colaboran como ONUT desde 2016.",
+      "Más de 20 años de experiencia en los campos de Diseño, Tecnología e Innovación.",
+      "Desde startups a grandes corporaciones. Marcas como Fjord, Accenture, Vodafone, Ubuntu, Barclays, Tesco, Transport for London, Halifax, COS-H&M... Actualmente, ambos trabajan en Miro redefiniendo el espacio de la colaboración visual en grupo.",
+      "ONUT es su vehículo de expresión. A través de su práctica artística reflexionan sobre el mundo en el que vivimos y cómo la tecnología afecta el comportamiento humano.",
+    ],
     socials: {
       mail: "pheurton@gmail.com",
       website: "https://juanreal.com/",
