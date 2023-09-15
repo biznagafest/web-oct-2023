@@ -606,7 +606,9 @@ const team = {
     {
       name: "Jesús Narbona",
       picture: "/team/jesus-narbona.jpg",
-      descriptionInParagraphs: [],
+      descriptionInParagraphs: [
+        "Uno de los organizadores de la comunidad de Vue Málaga, le gusta mucho viajar en sus ratos libres.",
+      ],
       position: "Full Stack Developer, Andy",
       socials: {
         linkedin: "https://www.linkedin.com/in/jesusnarbona",
