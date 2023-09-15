@@ -602,10 +602,17 @@ const team = {
         "Uno de los organizadores de la comunidad de Vue Málaga, amante del software libre y del baloncesto.",
       ],
       position: "Frontend Associate Engineer, Ebury",
+    },
+    {
+      name: "Jesús Narbona",
+      picture: "/team/jesus-narbona.jpg",
+      descriptionInParagraphs: [
+        "Uno de los organizadores de la comunidad de Vue Málaga, amante del software libre y del baloncesto.",
+      ],
+      position: "Full Stack Developer, Andy",
       socials: {
-        linkedin:
-          "https://www.linkedin.com/in/alba-ruiz-guti%C3%A9rrez-63851b20a/",
-        twitter: "https://twitter.com/AlbaRuizGutirr1",
+        linkedin: "https://www.linkedin.com/in/jesusnarbona",
+        twitter: "https://x.com/im_only_yisus?t=noKX3hAfqPh8J0kITz3Zow&s=09",
       },
     },
   ],
