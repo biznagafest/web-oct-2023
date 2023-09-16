@@ -102,7 +102,7 @@ export const speakers = [
   },
   {
     name: "Sasha Denisov",
-    position: "Chief Software Engineer",
+    position: "Chief Software Engineer, EPAM",
     picture: "/speakers/denisov.png",
     descriptionParagraphs: [
       "Sasha is an experienced software developer with a rich background, in IT for more than 20 years.",
@@ -149,7 +149,7 @@ export const speakers = [
   },
   {
     name: "Albert Sunyer",
-    position: "Technical Account Manager",
+    position: "Technical Account Manager, Google",
     picture: "/speakers/albert.jpeg",
     descriptionParagraphs: [],
     socials: {
@@ -158,7 +158,7 @@ export const speakers = [
   },
   {
     name: "Alba Rivas",
-    position: "Principal Developer Advocate at Salesforce",
+    position: "Principal Developer Advocate, Salesforce",
     picture: "/speakers/albarivas.jpeg",
     descriptionParagraphs: [],
     socials: {
@@ -237,8 +237,8 @@ export const events = [
       "Las pruebas de API han sido un desafío para los probadores y herramientas como Postman han facilitado esta tarea gracias a la creación manual de colecciones de solicitudes. Pero, ¿cómo podemos configurar pruebas automatizadas de API usando Postman y lanzar estas pruebas en contenedores? No solo eso, sino también integrarlos en nuestras canalizaciones de CI/CD.",
       "En esta charla, Fran Guerrero explorará 3 puntos clave en la automatización de pruebas API con herramientas habituales como Postman: es decir, la creación de pruebas automatizadas desde Postman, cómo ejecutar tus recopilaciones de solicitudes y sus pruebas automatizadas usando Docker, así como los contenedores adecuados.para ellos y cómo las pruebas de API se integran en una canalización de CI / CD de una manera sencilla usando GitlabCI.",
     ],
-    durationInMinutes: 45,
-    place: "auditorium",
+    durationInMinutes: 120,
+    place: "Track 1",
     type: "workshop",
     speakers: ["Francisco Guerrero"],
     language: "Español",
@@ -250,8 +250,8 @@ export const events = [
       "Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy.",
       "Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills.",
     ],
-    durationInMinutes: 45,
-    place: "auditorium",
+    durationInMinutes: 120,
+    place: "Track 1",
     type: "workshop",
     speakers: ["Sasha Denisov"],
     language: "English",
@@ -272,8 +272,8 @@ export const events = [
     descriptionInParagraphs: [
       "In this game you will combine Vision API, Translation API, and Natural Language API, analyze images with the Vision API, perform text analysis with the Cloud Natural Language API, and use Kubernetes and Cloud Vision API to classify images from Reddit's /r/aww subreddit and displayed the results in a web app.",
     ],
-    durationInMinutes: 45,
-    place: "auditorium",
+    durationInMinutes: 180,
+    place: "Track 1",
     type: "workshop",
     speakers: ["Albert Sunyer"],
     language: "Español",
