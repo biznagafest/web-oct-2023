@@ -615,6 +615,15 @@ const team = {
         twitter: "https://x.com/im_only_yisus?t=noKX3hAfqPh8J0kITz3Zow&s=09",
       },
     },
+    {
+      name: "Raúl Carnero",
+      picture: "/team/raul-carnero.jpg",
+      descriptionInParagraphs: [],
+      position: "Frontend Developer, Paratytech",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/rcarnero/",
+      },
+    },
   ],
 } as const satisfies Team;
 
