@@ -619,9 +619,21 @@ const team = {
       name: "Raúl Carnero",
       picture: "/team/raul-carnero.jpg",
       descriptionInParagraphs: [],
-      position: "Frontend Developer, Paratytech",
+      position: "Frontend Developer, Paraty Tech",
       socials: {
         linkedin: "https://www.linkedin.com/in/rcarnero/",
+      },
+    },
+    {
+      name: "Sergio Bellido",
+      picture: "/team/sergio-bellido.jpg",
+      descriptionInParagraphs: [
+        "Amante del mundo del desarrollo desde mis comienzos, he tenido la oportunidad de vivir mi pasión desde diferentes ángulos muy distintos.",
+        "Actualmente dedico cada hueco libre (cada vez menos) a seguir alimentando mis ganas de aprender más y más del universo tech.",
+      ],
+      position: "Ingeniero de Business Intelligence, analista de datos.",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/sergiobellidoengineer",
       },
     },
   ],
