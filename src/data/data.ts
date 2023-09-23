@@ -636,6 +636,17 @@ const team = {
         linkedin: "https://www.linkedin.com/in/sergiobellidoengineer",
       },
     },
+    {
+      name: "Javier Sánchez",
+      picture: "/team/javier-sanchez.jpg",
+      descriptionInParagraphs: [
+        "Apasionado del software libre y músico en mis ratos libres."
+      ],
+      position: "DevOps Engineer",
+      socials: {
+        linkedin: "https://www.linkedin.com/in/javsanpae/",
+      },
+    },
   ],
 } as const satisfies Team;
 
