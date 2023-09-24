@@ -82,7 +82,6 @@ export type Sponsor =
       tier: SponsorTier;
       descriptionInParagraphs: ReadonlyArray<string>;
       picture: string;
-      url: string;
       socials: Socials;
     };
 
