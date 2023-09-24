@@ -137,67 +137,51 @@ export const tickets = [
 
 export const sponsors = [
   {
+    hasFeaturedPage: true,
     name: "Fortris",
     picture: "/sponsors/fortris.svg",
     tier: "platinum",
     url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "gold",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "silver",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "bronze",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "media",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "community",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "food",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "platinum",
-    url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Fortris",
-    picture: "/sponsors/fortris.svg",
-    tier: "platinum",
-    url: "https://fortris.com/",
-    description: "fortris",
+    descriptionInParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante.",
+      "Id volutpat lacus laoreet non curabitur gravida. Tincidunt augue interdum velit euismod. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Eleifend donec pretium vulputate sapien. Mi bibendum neque egestas congue quisque egestas. Sed risus ultricies tristique nulla aliquet enim tortor.",
+      "Interdum consectetur libero id faucibus nisl tincidunt eget. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Sed pulvinar proin gravida hendrerit.",
+    ],
+    socials: {},
+    jobOffers: [
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+    ],
   },
 ] as const satisfies ReadonlyArray<Sponsor>;
 

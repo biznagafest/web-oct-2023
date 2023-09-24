@@ -11,6 +11,10 @@ export function getStaticPaths() {
 const { staff } = Astro.params;
 
 const staffData = DATA.team.staff[Number(staff)];
+
+if (!staffData) {
+  return Astro.redirect("/");
+}
 ---
 
 <Layout
