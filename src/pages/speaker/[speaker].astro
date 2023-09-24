@@ -14,6 +14,10 @@ const { speaker } = Astro.params;
 
 const speakerData = DATA.speakers[Number(speaker)];
 
+if (!speakerData) {
+  return Astro.redirect("/");
+}
+
 const events = DATA.events.filter((event) =>
   event.speakers.includes(speakerData.name as any)
 );

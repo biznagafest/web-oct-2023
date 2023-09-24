@@ -512,95 +512,51 @@ export const tickets = [
 
 export const sponsors = [
   {
-    name: "Google",
-    picture: "/sponsors/google.png",
-    tier: "platinum",
-    url: "https://google.com/",
-    description: "google",
-  },
-  {
+    hasFeaturedPage: true,
     name: "Fortris",
     picture: "/sponsors/fortris.svg",
     tier: "platinum",
     url: "https://fortris.com/",
-    description: "fortris",
-  },
-  {
-    name: "Freepik",
-    picture: "/sponsors/freepik.png",
-    tier: "silver",
-    url: "https://www.freepik.com/",
-    description: "freepik",
-  },
-  {
-    name: "fillthegapp",
-    picture: "/sponsors/fillthegapp.png",
-    tier: "gold",
-    url: "https://fillthegapp.com/",
-    description: "Fill the Gapp",
-  },
-  {
-    name: "PwC",
-    picture: "/sponsors/pwc.png",
-    tier: "gold",
-    url: "https://www.pwc.com/",
-    description: "PwC",
-  },
-  {
-    name: "Verisk",
-    picture: "/sponsors/verisk.png",
-    tier: "gold",
-    url: "https://www.verisk.com/",
-    description: "Verisk",
-  },
-  {
-    name: "CodeSpace",
-    picture: "/sponsors/codespace.svg",
-    tier: "media",
-    url: "https://codespaceacademy.com/",
-    description: "Code Space Academy",
-  },
-  {
-    name: "DotTech",
-    picture: "/sponsors/communities/dottech.svg",
-    tier: "community",
-    url: "https://www.youtube.com/@DotTechES",
-    description: "Dottech",
-  },
-  {
-    name: "Angular Málaga",
-    picture: "/sponsors/communities/angularmalaga.svg",
-    tier: "community",
-    url: "https://angularmalaga.com/",
-    description: "Angular Málaga",
-  },
-  {
-    name: "GDG Jaén",
-    picture: "/sponsors/communities/gdgjaen.svg",
-    tier: "community",
-    url: "https://gdg.community.dev/gdg-jaen/",
-    description: "GDG Jaén",
-  },
-  {
-    name: "VUE Málaga",
-    picture: "/sponsors/communities/vuemalaga.webp",
-    tier: "community",
-    url: "https://www.vuemalaga.com/",
-    description: "Vue Málaga",
-  },
-  {
-    name: "Flutter Málaga",
-    picture: "/sponsors/communities/fluttermalaga.jpeg",
-    tier: "community",
-    url: "https://www.meetup.com/es-ES/flutter-malaga/",
-    description: "Flutter Málaga",
-  },
-  {
-    name: "Yes We Tech",
-    picture: "/sponsors/communities/yeswetech.jpg",
-    tier: "community",
-    url: "https://www.yeswetech.org/",
-    description: "Yes We Tech",
+    descriptionInParagraphs: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante.",
+      "Id volutpat lacus laoreet non curabitur gravida. Tincidunt augue interdum velit euismod. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Eleifend donec pretium vulputate sapien. Mi bibendum neque egestas congue quisque egestas. Sed risus ultricies tristique nulla aliquet enim tortor.",
+      "Interdum consectetur libero id faucibus nisl tincidunt eget. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Sed pulvinar proin gravida hendrerit.",
+    ],
+    socials: {},
+    jobOffers: [
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+      {
+        jobTitle: "Frontend Developer",
+        url: "https://google.com",
+        descriptionInParagrapgs: [
+          "We are looking for a frontend developer in technology stack Angular, React, Vue, etc.",
+          "2 years of experience required",
+        ],
+      },
+    ],
   },
 ] as const satisfies ReadonlyArray<Sponsor>;
 

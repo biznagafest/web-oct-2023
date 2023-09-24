@@ -1,0 +1,54 @@
+---
+import JobOfferCard from "../../components/JobOfferCard.astro";
+import Socials from "../../components/Socials.astro";
+import If from "../../components/utils/If.astro";
+import { DATA } from "../../data/data";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return DATA.sponsors
+    .filter((sponsor) => sponsor.hasFeaturedPage)
+    .map((sponsor) => ({
+      params: { sponsor: sponsor.name },
+    }));
+}
+
+const { sponsor } = Astro.params;
+
+const sponsorData = DATA.sponsors.find((s) => s.name === sponsor);
+
+if (!sponsorData || sponsorData.hasFeaturedPage === false) {
+  return Astro.redirect("/");
+}
+---
+
+<Layout
+  title={`${sponsorData.name} | ${DATA.title}`}
+  description={sponsorData.descriptionInParagraphs.join(" ")}
+  lang="es"
+>
+  <main class="flex flex-col gap-6 min-h-screen">
+    <aside class="bg-green-50 dark:bg-blue-800 p-6">
+      <div class="w-8/12 p-10 mx-auto">
+        <img class="w-full" src={sponsorData.picture} />
+      </div>
+    </aside>
+    <If condition={!!sponsorData.descriptionInParagraphs.length}>
+      <div class="md:w-8/12 md:mx-auto flex flex-col gap-4 text-xl py-10">
+        {sponsorData.descriptionInParagraphs.map((descPar) => <p>{descPar}</p>)}
+      </div>
+    </If>
+    <If condition={!!sponsorData.jobOffers}>
+      <h3 class="text-3xl font-bold mx-auto text-center">Ofertas de Trabajo</h3>
+      <section
+        class="grid grid-cols-1 lg:grid-cols-2 py-2 px-6 pb-10 md:py-20 gap-6"
+      >
+        {
+          sponsorData.jobOffers.map((jobOffer) => (
+            <JobOfferCard jobOffer={jobOffer} />
+          ))
+        }
+      </section>
+    </If>
+  </main>
+</Layout>
