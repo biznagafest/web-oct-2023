@@ -47,13 +47,29 @@ export type SponsorTier =
   | "community"
   | "supporter";
 
-export interface Sponsor {
-  name: string;
-  tier: SponsorTier;
-  description?: Nullish<string>;
-  picture: string;
+export interface JobOffer {
+  jobTitle: string;
   url: string;
+  descriptionInParagrapgs: ReadonlyArray<string>;
 }
+
+export type Sponsor =
+  | {
+      hasFeaturedPage: false;
+      name: string;
+      tier: SponsorTier;
+      picture: string;
+      url: string;
+    }
+  | {
+      hasFeaturedPage: true;
+      jobOffers: ReadonlyArray<JobOffer>;
+      name: string;
+      tier: SponsorTier;
+      descriptionInParagraphs: ReadonlyArray<string>;
+      picture: string;
+      socials: Socials;
+    };
 
 export interface Ticket {
   name: string;
