@@ -28,21 +28,22 @@ if (!sponsorData || sponsorData.hasFeaturedPage === false) {
   lang="es"
 >
   <main class="flex flex-col gap-6 min-h-screen">
-    <aside class="bg-green-50 dark:bg-blue-800 p-6">
-      <div class="w-8/12 p-10 mx-auto">
+    <header class="bg-green-50 dark:bg-blue-800 p-6">
+      <div class="md:w-8/12 p-4 md:p-10 mx-auto">
         <img class="w-full" src={sponsorData.picture} />
       </div>
-    </aside>
+    </header>
     <If condition={!!sponsorData.descriptionInParagraphs.length}>
-      <div class="md:w-8/12 md:mx-auto flex flex-col gap-4 text-xl py-10">
+      <div class="md:w-8/12 md:mx-auto flex flex-col gap-4 text-xl p-4 py-10">
         {sponsorData.descriptionInParagraphs.map((descPar) => <p>{descPar}</p>)}
       </div>
     </If>
+    <div class="mx-auto">
+      <Socials socials={sponsorData.socials} />
+    </div>
     <If condition={!!sponsorData.jobOffers}>
       <h3 class="text-3xl font-bold mx-auto text-center">Ofertas de Trabajo</h3>
-      <section
-        class="grid grid-cols-1 lg:grid-cols-2 py-2 px-6 pb-10 md:py-20 gap-6"
-      >
+      <section class="grid grid-cols-1 lg:grid-cols-2 py-2 px-6 pb-10 gap-6">
         {
           sponsorData.jobOffers.map((jobOffer) => (
             <JobOfferCard jobOffer={jobOffer} />

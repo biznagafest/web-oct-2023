@@ -5,7 +5,6 @@ import type {
   Speaker,
   Sponsor,
   Team,
-  TeamMember,
   Ticket,
 } from "./data.type";
 
@@ -141,13 +140,14 @@ export const sponsors = [
     name: "Fortris",
     picture: "/sponsors/fortris.svg",
     tier: "platinum",
-    url: "https://fortris.com/",
     descriptionInParagraphs: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim suspendisse in est ante.",
       "Id volutpat lacus laoreet non curabitur gravida. Tincidunt augue interdum velit euismod. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Eleifend donec pretium vulputate sapien. Mi bibendum neque egestas congue quisque egestas. Sed risus ultricies tristique nulla aliquet enim tortor.",
       "Interdum consectetur libero id faucibus nisl tincidunt eget. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Sed pulvinar proin gravida hendrerit.",
     ],
-    socials: {},
+    socials: {
+      website: "https://fortris.com",
+    },
     jobOffers: [
       {
         jobTitle: "Frontend Developer",
