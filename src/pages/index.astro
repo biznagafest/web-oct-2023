@@ -113,11 +113,11 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
     </If>
     <If condition={!!DATA.schedules.length}>
       <section
-        id="speakers"
+        id="schedules"
       > 
         <div 
         class="bg-green-50 dark:bg-blue-900 text-dark-background dark:text-light-background">
-          <div class="container flex py-20 gap-16 px-6">
+          <div class="container py-20 gap-16 px-6">
             <AnimatedOnViewportEnter
               animation="animate__animated animate__fadeInLeft"
             >
@@ -125,16 +125,11 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
                 Schedule
               </h2>
             </AnimatedOnViewportEnter>
-
-            <div
-              class="flex flex-col align-middle justify-center md:grid md:grid-cols-2 gap-2 md:gap-8 xl:gap-16 md:auto-rows-fr md:place-content-center px-6"
-            >
-            </div>
           </div>
         </div>
-        <div class="container grid grid-cols-2 py-10 px-6 sm:pt-20">
+        <div class="container grid sm:grid-cols-2 py-10 px-6 sm:pt-20">
             <div>
-                <h4 class="text-2xl font-bold">Main track</h4>
+                <h4 class="text-2xl text-center	sm:text-left font-bold">Main track</h4>
             </div>
             <div class="hidden sm:block">
                 <h4 class="text-2xl font-bold">Workshop</h4>
