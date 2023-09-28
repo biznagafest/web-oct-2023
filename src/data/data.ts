@@ -2,6 +2,7 @@ import type {
   Data,
   Event,
   FAQ,
+  Schedule,
   Speaker,
   Sponsor,
   TeamMember,
@@ -161,6 +162,164 @@ export const speakers = [
     },
   },
 ] as const satisfies ReadonlyArray<Speaker>;
+
+export const schedules: Schedule[] = [
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "9.00",
+        time_end: "9.15",
+        title: "Welcome",
+        subtitle: "Presentación y agradecimientos"
+      },
+    ]
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "9.15",
+        time_end: "10.15",
+        title: "‘Modern Web Debugging’",
+        subtitle: "Jecelyn Yeen",
+        description: "In this talk, Jecelyn will dig into the modern state of debugging, improvements in DevTools, and how you can use them to reliably debug your apps.",
+        type: "lecture"
+      },
+      {
+        time_start: "10.15",
+        time_end: "11.15",
+        title: "‘Haz magia con CSS’",
+        subtitle: "Carmen Ansio",
+        description: "En la charla veremos hechizos de magia a modo de snippets de código CSS variados, desde arte con CSS, ilusiones ópticas, un videojuego funcional, interfaces animadas, funciones en CSS, elementos de html con los que tener funcionalidades de saque en el navegador sin necesidad de JS...",
+        type: "lecture"
+      },
+      {
+        time_start: "9.15",
+        time_end: "11.15",
+        title: "‘Compose Flutter modules in your Android App’",
+        subtitle: "Sasha Denisov",
+        description: "Explore the process of embedding Flutter into existing Android applications in this live coding session. Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy. Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills.",
+        type: "workshop"
+      },
+    ]
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "11.15",
+        time_end: "12.00",
+        title: "☕ Coffee break",
+        subtitle: "Recarguemos las pilas"
+      },
+    ]
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "12.00",
+        time_end: "13.00",
+        title: "‘Under the hood of decentralized technology: Examining scalability and security’",
+        subtitle: "Álvaro López",
+        description: "In this talk, Jecelyn will dig into the modern state of debugging, improvements in DevTools, and how you can use them to reliably debug your apps.",
+        type: "lecture"
+      },
+      {
+        time_start: "13.00",
+        time_end: "14.00",
+        title: "‘Creatividad en la era de la AI’ ¿Existe realmente la posibilidad de ser original?",
+        subtitle: "Juan Real / Alix Martínez",
+        description: "En esta charla profundizaremos en analíticas, anécdotas, caminos, herramientas prácticas y personas detrás del #EX, hablando concretamente del sector Tech.",
+        type: "lecture"
+      },
+      {
+        time_start: "12.00",
+        time_end: "14.00",
+        title: "‘API testing con herramienta CI/CD’",
+        subtitle: "Francisco Guerrero",
+        description: "En esta charla, Fran Guerrero explorará 3 puntos clave en la automatización de pruebas API con herramientas habituales como Postman: es decir, la creación de pruebas automatizadas desde Postman, cómo ejecutar tus recopilaciones de solicitudes y sus pruebas automatizadas usando Docker, así como los contenedores adecuados.para ellos y cómo las pruebas de API se integran en una canalización de CI / CD de una manera sencilla usando GitlabCI.",
+        type: "workshop"
+      },
+    ]
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "14.00",
+        time_end: "15.30",
+        title: "🥘 Almuerzo",
+        subtitle: "¡Prepárate para la paella!"
+      },
+    ]
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "15.30",
+        time_end: "16.30",
+        title: "‘El presente y el futuro inminente del frontend: Perspectivas y predicciones’",
+        subtitle: "Bezael / Leifer",
+        description: "En esta charla dinámica, exploraremos las tendencias actuales y las previsiones futuras del desarrollo frontend. Con un enfoque especial en los frameworks, herramientas y técnicas emergentes, analizaremos cómo estas innovaciones están redefiniendo las capacidades y responsabilidades del desarrollo frontend.",
+        type: "lecture"
+      },
+      {
+        time_start: "16.30",
+        time_end: "17.30",
+        title: "‘¿Salesforce developer? ¿Quééé?’",
+        subtitle: "Alba Rivas",
+        description: "En esta sesión os contaré a qué se dedica un Salesforce Developer, veremos qué lenguajes y herramientas se utilizan para crear aplicaciones en Salesforce, y, desde mi experiencia personal, os contaré las ventajas y retos que os podéis encontrar en el camino.",
+        type: "lecture"
+      },
+      {
+        time_start: "15.30",
+        time_end: "17.30",
+        title: "‘ML API Skills’",
+        subtitle: "Albert Sunyer",
+        description: "In this game you will combine Vision API, Translation API, and Natural Language API, analyze images with the Vision API, perform text analysis with the Cloud Natural Language API, and use Kubernetes and Cloud Vision API to classify images from Reddit's /r/aww subreddit and displayed the results in a web app.",
+        type: "workshop"
+      },
+    ]
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "17.30",
+        time_end: "17.45",
+        title: "☕ Coffee break",
+        subtitle: "Último tirón"
+      },
+    ]
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "17.45",
+        time_end: "18.45",
+        title: "‘A developer journey’",
+        subtitle: "Irene M. Morgado",
+        description: '¿Sabes qué además de la UX existe toda una ciencia detrás de la Experiencia de Developers y otras personas que trabajan en empresas tech? Si tu empresa "presume" de cuidar bien a quienes trabajan en ella, seguro que tiene expertas y expertos en #EX(Employee Xperience) que trabajan para que tu día a día y la cultura de tu organización sea un éxito...o deberían',
+        type: "lecture"
+      },
+    ]
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "18.45",
+        time_end: "19.00",
+        title: "Sorteo y despedida",
+        subtitle: "¡Hasta el año que viene!"
+      },
+    ]
+  },
+];
 
 export const events = [
   {
@@ -635,6 +794,7 @@ export const DATA: Data = {
   tickets,
   sponsors,
   speakers,
+  schedules,
   events,
   footerLinks: [
     {

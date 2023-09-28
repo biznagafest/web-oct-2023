@@ -9,6 +9,7 @@ import Accordion from "../components/Accordion";
 import TicketSection from "../components/TicketSection";
 import type { Sponsor as ISponsor, SponsorTier } from "../data/data.type";
 import TeamMember from "../components/TeamMember.astro";
+import Schedule from "../components/Schedule.astro";
 
 function formatDate(date: Date) {
   const formatter = new Intl.DateTimeFormat("es-ES", {
@@ -107,6 +108,44 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
               })
             }
           </div>
+        </div>
+      </section>
+    </If>
+    <If condition={!!DATA.schedules.length}>
+      <section
+        id="speakers"
+      > 
+        <div 
+        class="bg-green-50 dark:bg-blue-900 text-dark-background dark:text-light-background">
+          <div class="container flex py-20 gap-16 px-6">
+            <AnimatedOnViewportEnter
+              animation="animate__animated animate__fadeInLeft"
+            >
+              <h2 class="text-3xl font-bold text-center md:text-left">
+                Schedule
+              </h2>
+            </AnimatedOnViewportEnter>
+
+            <div
+              class="flex flex-col align-middle justify-center md:grid md:grid-cols-2 gap-2 md:gap-8 xl:gap-16 md:auto-rows-fr md:place-content-center px-6"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="container grid grid-cols-2 py-10 px-6 sm:pt-20">
+            <div>
+                <h4 class="text-2xl font-bold">Main track</h4>
+            </div>
+            <div class="hidden sm:block">
+                <h4 class="text-2xl font-bold">Workshop</h4>
+            </div>
+        </div>
+        <div class="container py-0 px-6">
+        {
+          DATA.schedules.map((schedule) => {
+            return <Schedule schedule={schedule} type={schedule.type}/>;
+          })
+        }
         </div>
       </section>
     </If>

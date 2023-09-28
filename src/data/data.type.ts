@@ -24,6 +24,20 @@ export type Speaker = {
   picture: string;
 };
 
+export type ScheduleEvent = {
+  time_start: string;
+  time_end: string;
+  title: string;
+  subtitle?: Nullish<string>;
+  description?: Nullish<string>;
+  type?: Nullish<"lecture" | "workshop">;
+}
+
+export type Schedule = {
+  type: "break" | "no-break";
+  events: ScheduleEvent[];
+}
+
 export interface TeamMember {
   name: string;
   position?: Nullish<string>;
@@ -110,6 +124,7 @@ export type Data = {
     >;
   };
   speakers: ReadonlyArray<Speaker>;
+  schedules: ReadonlyArray<Schedule>;
   team: ReadonlyArray<TeamMember>;
   sponsors: ReadonlyArray<Sponsor>;
   events: ReadonlyArray<Event>;
