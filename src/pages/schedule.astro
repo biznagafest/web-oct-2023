@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
               <h4 class="text-2xl font-bold">Workshop</h4>
           </div>
       </div>
-      <div class="container py-0 px-6 pb-16">
+      <div class="container py-0 px-6 pb-8 sm:pb-16">
       {
         DATA.schedules.map((schedule) => {
           return <ScheduleComponent schedule={schedule} type={schedule.type}/>;
