@@ -2,6 +2,7 @@ import type {
   Data,
   Event,
   FAQ,
+  Schedule,
   Speaker,
   Sponsor,
   Team,
@@ -47,7 +48,287 @@ export const speakers = [
       twitter: "https://twitter.com/LeiferMendez",
     },
   },
+  {
+    name: "Carmen Ansio",
+    position: "Freelance UX Engineer.",
+    picture: "/speakers/carmen.jpg",
+    descriptionParagraphs: [
+      "Mi nombre es Carmen Ansio y soy freelance UX Engineer. ",
+      "He trabajado en compañías increíbles diseñando e implementando productos digitales desde hace más de 10 años.",
+      "Además formo parte del programa de Google GDE y comparto mi pasión sobre diseño y desarrollo web a diario en redes. Actualmente imparto formaciones y consultorías enfocadas en formación para perfiles de diseño y desarrollo web.",
+    ],
+    socials: {
+      mail: "carmenansio@gmail.com",
+      twitter: "https://twitter.com/carmenansio",
+    },
+  },
+  {
+    name: "Álvaro López Sánchez",
+    position: "R&D Engineer / Innovation, Fortris",
+    picture: "/speakers/alvaro-lopez.jpeg",
+    descriptionParagraphs: [
+      "+10 yrs of expertise as a software engineer in the video game industry.",
+      "In recent years, I turned his attention to decentralized technologies in terms of cybersecurity and scalability.",
+      "Now, I hold the position of R&D Engineer at Fortris and am pursuing a Ph.D. at the University of Malaga in decentralized technology and its cybersecurity implications.",
+    ],
+    socials: {
+      mail: "bluebycode@gmail.com",
+      linkedin: "https://www.linkedin.com/in/bluebycode/",
+    },
+  },
+  {
+    name: "Irene M Morgado",
+    position: "Head of Brand & Culture, Kairós Digital Solutions",
+    picture: "/speakers/irene.jpg",
+    descriptionParagraphs: [],
+    socials: {
+      mail: "irenemmorgado@gmail.com",
+      linkedin: "https://www.linkedin.com/in/irenemmorgado/",
+    },
+  },
+  {
+    name: "Francisco Guerrero",
+    position: "QA Manager & QA Coach",
+    picture: "/speakers/fran-guerrero.jpeg",
+    descriptionParagraphs: [
+      "Fran Guerrero es un especialista certificado en Agile ISTQB con más de 12 años de experiencia en el campo de la Calidad del Software.",
+      "Implementa procesos de prueba, estrategias de control de calidad, herramientas innovadoras y construye relaciones sólidas en todos los equipos.Su objetivo siempre es que su equipo se convierta en una parte esencial del proceso de Calidad del Software",
+      "De vez en cuando, le gusta hablar en foros relacionados con QA y Testing sobre temas que incluyen Metodologías Ágiles, Test Automation y DevOps CI / CD.",
+    ],
+    socials: {
+      mail: "fran.guerrero.sanchez@gmail.com",
+      linkedin: "https://www.linkedin.com/in/franguerrero/",
+    },
+  },
+  {
+    name: "Sasha Denisov",
+    position: "Chief Software Engineer",
+    picture: "/speakers/denisov.png",
+    descriptionParagraphs: [
+      "Sasha is an experienced software developer with a rich background, in IT for more than 20 years.",
+      "He worked with different stacks in backend, frontend and mobile fields, but since 2018 his main interest is Flutter.Sasha is a Chief Software Engineer and Head of Flutter Discipline in EPAM Systems.",
+      "Also, he is Flutter and Dart GDE and Co- Organizer of Flutter Berlin community.",
+    ],
+    socials: {
+      mail: "denisov.shureg@gmail.com",
+      twitter: "https://twitter.com/ShuregDenisov",
+    },
+  },
+  {
+    name: "Alix Martínez Martínez",
+    position: "Design Leader, Miro",
+    picture: "/speakers/alix.jpg",
+    descriptionParagraphs: [],
+    socials: {
+      mail: "info@alixmzmz.eu",
+      website: "https://www.alixmzmz.eu/",
+      linkedin:
+        "https://www.linkedin.com/in/alix-mart%C3%ADnez-mart%C3%ADnez-60037b19/",
+    },
+  },
+  {
+    name: "Juan Manuel Real Garry",
+    position: "Product Design Manager, Miro",
+    picture: "/speakers/juanreal.jpeg",
+    descriptionParagraphs: [],
+    socials: {
+      mail: "pheurton@gmail.com",
+      website: "https://juanreal.com/",
+      linkedin: "https://www.linkedin.com/in/juanreal/",
+    },
+  },
+  {
+    name: "Albert Sunyer",
+    position: "Technical Account Manager",
+    picture: "/speakers/albert.jpeg",
+    descriptionParagraphs: [],
+    socials: {
+      mail: "sunyer@google.com",
+    },
+  },
+  {
+    name: "Alba Rivas",
+    position: "Principal Developer Advocate at Salesforce",
+    picture: "/speakers/albarivas.jpeg",
+    descriptionParagraphs: [],
+    socials: {
+      twitter: "https://twitter.com/AlbaSFDC",
+      linkedin: "https://www.linkedin.com/in/alba-rivas/",
+      mail: "alba.azconarivas@gmail.com",
+    },
+  },
 ] as const satisfies ReadonlyArray<Speaker>;
+
+export const schedules: Schedule[] = [
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "9.00",
+        time_end: "9.15",
+        title: "Welcome",
+        subtitle: "Presentación y agradecimientos",
+      },
+    ],
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "9.15",
+        time_end: "10.15",
+        title: "Modern Web Debugging",
+        subtitle: "Jecelyn Yeen",
+        description:
+          "In this talk, Jecelyn will dig into the modern state of debugging, improvements in DevTools, and how you can use them to reliably debug your apps.",
+        type: "lecture",
+      },
+      {
+        time_start: "10.15",
+        time_end: "11.15",
+        title: "Haz magia con CSS",
+        subtitle: "Carmen Ansio",
+        description:
+          "En la charla veremos hechizos de magia a modo de snippets de código CSS variados, desde arte con CSS, ilusiones ópticas, un videojuego funcional, interfaces animadas, funciones en CSS, elementos de html con los que tener funcionalidades de saque en el navegador sin necesidad de JS...",
+        type: "lecture",
+      },
+      {
+        time_start: "9.15",
+        time_end: "11.15",
+        title: "Compose Flutter modules in your Android App",
+        subtitle: "Sasha Denisov",
+        description:
+          "Explore the process of embedding Flutter into existing Android applications in this live coding session. Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy. Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills.",
+        type: "workshop",
+      },
+    ],
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "11.15",
+        time_end: "12.00",
+        title: "☕ Coffee break",
+        subtitle: "Recarguemos las pilas",
+      },
+    ],
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "12.00",
+        time_end: "13.00",
+        title:
+          "Under the hood of decentralized technology: Examining scalability and security",
+        subtitle: "Álvaro López",
+        description:
+          "In this talk, Jecelyn will dig into the modern state of debugging, improvements in DevTools, and how you can use them to reliably debug your apps.",
+        type: "lecture",
+      },
+      {
+        time_start: "13.00",
+        time_end: "14.00",
+        title:
+          "Creatividad en la era de la AI ¿Existe realmente la posibilidad de ser original?",
+        subtitle: "Juan Real / Alix Martínez",
+        description:
+          "En esta charla profundizaremos en analíticas, anécdotas, caminos, herramientas prácticas y personas detrás del #EX, hablando concretamente del sector Tech.",
+        type: "lecture",
+      },
+      {
+        time_start: "12.00",
+        time_end: "14.00",
+        title: "API testing con herramienta CI/CD",
+        subtitle: "Francisco Guerrero",
+        description:
+          "En esta charla, Fran Guerrero explorará 3 puntos clave en la automatización de pruebas API con herramientas habituales como Postman: es decir, la creación de pruebas automatizadas desde Postman, cómo ejecutar tus recopilaciones de solicitudes y sus pruebas automatizadas usando Docker, así como los contenedores adecuados.para ellos y cómo las pruebas de API se integran en una canalización de CI / CD de una manera sencilla usando GitlabCI.",
+        type: "workshop",
+      },
+    ],
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "14.00",
+        time_end: "15.30",
+        title: "🥘 Almuerzo",
+        subtitle: "¡Prepárate para la paella!",
+      },
+    ],
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "15.30",
+        time_end: "16.30",
+        title:
+          "El presente y el futuro inminente del frontend: Perspectivas y predicciones",
+        subtitle: "Bezael / Leifer",
+        description:
+          "En esta charla dinámica, exploraremos las tendencias actuales y las previsiones futuras del desarrollo frontend. Con un enfoque especial en los frameworks, herramientas y técnicas emergentes, analizaremos cómo estas innovaciones están redefiniendo las capacidades y responsabilidades del desarrollo frontend.",
+        type: "lecture",
+      },
+      {
+        time_start: "16.30",
+        time_end: "17.30",
+        title: "¿Salesforce developer? ¿Quééé?",
+        subtitle: "Alba Rivas",
+        description:
+          "En esta sesión os contaré a qué se dedica un Salesforce Developer, veremos qué lenguajes y herramientas se utilizan para crear aplicaciones en Salesforce, y, desde mi experiencia personal, os contaré las ventajas y retos que os podéis encontrar en el camino.",
+        type: "lecture",
+      },
+      {
+        time_start: "15.30",
+        time_end: "17.30",
+        title: "ML API Skills",
+        subtitle: "Albert Sunyer",
+        description:
+          "In this game you will combine Vision API, Translation API, and Natural Language API, analyze images with the Vision API, perform text analysis with the Cloud Natural Language API, and use Kubernetes and Cloud Vision API to classify images from Reddit's /r/aww subreddit and displayed the results in a web app.",
+        type: "workshop",
+      },
+    ],
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "17.30",
+        time_end: "17.45",
+        title: "☕ Coffee break",
+        subtitle: "Último tirón",
+      },
+    ],
+  },
+  {
+    type: "no-break",
+    events: [
+      {
+        time_start: "17.45",
+        time_end: "18.45",
+        title: "A developer journey",
+        subtitle: "Irene M. Morgado",
+        description:
+          '¿Sabes qué además de la UX existe toda una ciencia detrás de la Experiencia de Developers y otras personas que trabajan en empresas tech? Si tu empresa "presume" de cuidar bien a quienes trabajan en ella, seguro que tiene expertas y expertos en #EX(Employee Xperience) que trabajan para que tu día a día y la cultura de tu organización sea un éxito...o deberían',
+        type: "lecture",
+      },
+    ],
+  },
+  {
+    type: "break",
+    events: [
+      {
+        time_start: "18.45",
+        time_end: "19.00",
+        title: "Sorteo y despedida",
+        subtitle: "¡Hasta el año que viene!",
+      },
+    ],
+  },
+];
 
 export const events = [
   {
@@ -73,6 +354,101 @@ export const events = [
     place: "auditorium",
     type: "lecture",
     speakers: ["Bezael Pérez", "Leifer Mendez"],
+    language: "Español",
+  },
+  {
+    name: "✨ Haz magia con CSS",
+    descriptionInParagraphs: [
+      "En la charla veremos hechizos de magia a modo de snippets de código CSS variados, desde arte con CSS, ilusiones ópticas, un videojuego funcional, interfaces animadas, funciones en CSS, elementos de html con los que tener funcionalidades de saque en el navegador sin necesidad de JS...",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Carmen Ansio"],
+    language: "Español",
+  },
+  {
+    name: "Under the Hood of Decentralized Technology: Examining Scalability and Security",
+    descriptionInParagraphs: [
+      "This talk examines everything no one tells you about blockchain as a decentralized distributed system: challenges of balancing security and scalability.",
+      "It covers the costs of improving performance, known challenges in blockchain platforms, and the issue of centralization in decentralized systems.",
+      "It visits the known-unknown security attacks case per case.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Álvaro López Sánchez"],
+    language: "Español",
+  },
+  {
+    name: "A Developer Journey",
+    descriptionInParagraphs: [
+      "¿Sabes qué además de la UX existe toda una ciencia detrás de la Experiencia de Developers y otras personas que trabajan en empresas tech?",
+      'Si tu empresa "presume" de cuidar bien a quienes trabajan en ella, seguro que tiene expertas y expertos en #EX(Employee Xperience) que trabajan para que tu día a día y la cultura de tu organización sea un éxito...o deberían.',
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Irene M Morgado"],
+    language: "Español",
+  },
+  {
+    name: "API Testing con herramientas CI/CD",
+    descriptionInParagraphs: [
+      "Las pruebas de API han sido un desafío para los probadores y herramientas como Postman han facilitado esta tarea gracias a la creación manual de colecciones de solicitudes. Pero, ¿cómo podemos configurar pruebas automatizadas de API usando Postman y lanzar estas pruebas en contenedores? No solo eso, sino también integrarlos en nuestras canalizaciones de CI/CD.",
+      "En esta charla, Fran Guerrero explorará 3 puntos clave en la automatización de pruebas API con herramientas habituales como Postman: es decir, la creación de pruebas automatizadas desde Postman, cómo ejecutar tus recopilaciones de solicitudes y sus pruebas automatizadas usando Docker, así como los contenedores adecuados.para ellos y cómo las pruebas de API se integran en una canalización de CI / CD de una manera sencilla usando GitlabCI.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "workshop",
+    speakers: ["Francisco Guerrero"],
+    language: "Español",
+  },
+  {
+    name: "Compose Flutter Modules in your Android App",
+    descriptionInParagraphs: [
+      "Explore the process of embedding Flutter into existing Android applications in this live coding session.",
+      "Learn how to seamlessly integrate Flutter with your native code, rendering multiple Flutter modules on a single screen and incorporating them into a Jetpack Compose hierarchy.",
+      "Discover the techniques and best practices for successfully integrating Flutter into your Android app.Join us for this informative session and level up your app development skills.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "workshop",
+    speakers: ["Sasha Denisov"],
+    language: "English",
+  },
+  {
+    name: "Creatividad en la era de la IA: ¿Existe realmente la posibilidad de ser original?",
+    descriptionInParagraphs: [
+      "En esta charla profundizaremos en analíticas, anécdotas, caminos, herramientas prácticas y personas detrás del #EX, hablando concretamente del sector Tech.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Juan Manuel Real Garry", "Alix Martínez Martínez"],
+    language: "Español",
+  },
+  {
+    name: "ML API Skills",
+    descriptionInParagraphs: [
+      "In this game you will combine Vision API, Translation API, and Natural Language API, analyze images with the Vision API, perform text analysis with the Cloud Natural Language API, and use Kubernetes and Cloud Vision API to classify images from Reddit's /r/aww subreddit and displayed the results in a web app.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "workshop",
+    speakers: ["Albert Sunyer"],
+    language: "Español",
+  },
+  {
+    name: "¿Salesforce Developer?¿Quééé?",
+    descriptionInParagraphs: [
+      "El rol de Salesforce Developer está altamente demandado en el mercado laboral, pero a la vez, es un gran desconocido.",
+      "En esta sesión os contaré a qué se dedica un Salesforce Developer, veremos qué lenguajes y herramientas se utilizan para crear aplicaciones en Salesforce, y, desde mi experiencia personal, os contaré las ventajas y retos que os podéis encontrar en el camino.",
+    ],
+    durationInMinutes: 45,
+    place: "auditorium",
+    type: "lecture",
+    speakers: ["Alba Rivas"],
     language: "Español",
   },
 ] as const satisfies ReadonlyArray<Event>;
@@ -315,8 +691,9 @@ export const DATA: Data = {
   date: new Date(2023, 9, 28),
   about: {
     descriptionInParagraphs: [
-      'El BiznagaFest es el gran evento IT de la Costa del Sol para las comunidades "Google developers" de España, que se reúnen para ofrecer conferencias y workshops sobre Devops, Backend, Fronted, Chatbots, IA, Blockchain y soft skills.',
-      "En sus ediciones anteriores han pasado grandes expertos que trabajan en las principales empresas tecnológicas tanto nacionales e internacionales, como Google, Virus Total, Deloitte, Red Hat, Chainalysis, Singular, entre otros.",
+      'El BiznagaFest es el gran evento IT de la Costa del Sol para las comunidades "Google developers" de España, que se reúnen para ofrecer conferencias y workshops sobre Devops, Backend, Frontend, Chatbots, IA, Blockchain y soft skills.',
+      "En su edición anterior asisitieron más de 500 personas a las 12 horas de ponencias y talleres.",
+      "Por Biznaga fest han pasado grandes expertos que trabajan en las principales empresas tecnológicas nacionales e internacionales, como Google, Virus Total, Deloitte, Red Hat, Chainalysis, Sngular, entre otros.",
     ],
     socials: {
       instagram: "https://www.instagram.com/biznagafest/",
@@ -376,6 +753,7 @@ export const DATA: Data = {
   tickets,
   sponsors,
   speakers,
+  schedules,
   events,
   footerLinks: [
     {

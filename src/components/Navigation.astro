@@ -39,6 +39,13 @@ import If from "./utils/If.astro";
     <ul
       class="flex justify-evenly gap-2 text-sm flex-col lg:flex-row font-bold"
     >
+        <If condition={!!DATA.schedules.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/schedule" class="px-3"> Schedule</a>
+        </li>
+      </If>
       <If condition={!!DATA.speakers.length}>
         <li
           class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"

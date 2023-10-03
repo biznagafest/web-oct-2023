@@ -1,0 +1,45 @@
+---
+import AnimatedOnViewportEnter from "../../components/utils/AnimatedOnViewportEnter.astro";
+import ScheduleComponent from "../../components/Schedule.astro";
+import { DATA } from "../../data/data";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title={"Schedule"} description={""} lang="es">
+  <main>
+    <section id="schedules">
+      <div
+        class="bg-green-50 dark:bg-blue-900 text-dark-background dark:text-light-background"
+      >
+        <div class="container py-20 gap-16 px-6">
+          <AnimatedOnViewportEnter
+            animation="animate__animated animate__fadeInLeft"
+          >
+            <h2 class="text-3xl font-bold text-center md:text-left">
+              Schedule
+            </h2>
+          </AnimatedOnViewportEnter>
+        </div>
+      </div>
+      <div class="container grid sm:grid-cols-2 py-10 px-6 sm:pt-20">
+        <div>
+          <h4 class="text-2xl text-center sm:text-left font-bold">
+            Main track
+          </h4>
+        </div>
+        <div class="hidden sm:block">
+          <h4 class="text-2xl font-bold">Workshop</h4>
+        </div>
+      </div>
+      <div class="container py-0 px-6 pb-8 sm:pb-16">
+        {
+          DATA.schedules.map((schedule) => {
+            return (
+              <ScheduleComponent schedule={schedule} type={schedule.type} />
+            );
+          })
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
