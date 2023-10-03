@@ -7,4 +7,4 @@
 - [x] Add organizers section
 - [ ] Add Call for papers button if theres no speakers
 - [ ] Add slider with pictures of past editions
-- [ ] Add schedule component
+- [x] Add schedule component
