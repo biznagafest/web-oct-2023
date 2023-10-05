@@ -542,7 +542,47 @@ export const sponsors = [
       "El éxito de Fortris se debe en gran parte a su enfoque innovador en el mundo de los activos digitales. La compañía brinda a las empresas las herramientas para mantener activos digitales y utilizarlos en operaciones comerciales, como pagos transfronterizos y nóminas.",
       "Fortris es miembro de la AEFI (Asociación Española de FinTech e InsurTech), lo que demuestra su compromiso con el desarrollo del sector fintech y con el fortalecimiento de la economía digital en España y en toda Europa.",
     ],
-    jobOffers: [],
+    jobOffers: [
+      {
+        jobTitle: "Lead Software Engineering (m/f/d)",
+        url: "https://fortris.jobs.personio.com/job/1160908?language=en&display=en",
+        descriptionInParagrapgs: [
+          "We are looking for a highly technical and skilled engineer with excellent leadership, communication and organizational skills.  In this role, you will have the opportunity to work in a high velocity, high impact environment and cultivate a growing team of bright, passionate engineers.",
+          "This is a crucial role for the development team and will require you to focus on clearing any technical issues that may impact the delivery and support of a high quality product. In this role, you will have split responsibilities, with up to 70% of your time spent on non-coding tasks and the remaining time dedicated to hands-on coding, maintaining, and developing scalable solutions.",
+        ],
+      },
+      {
+        jobTitle: "Delivery Lead (m/f/d)",
+        url: "https://fortris.jobs.personio.com/job/1140014?language=en&display=en",
+        descriptionInParagrapgs: [
+          "We are looking for a Delivery Lead to manage the day-to-day delivery of a cross functional development pod. This person will focus on the delivery of key features of our crypto platform coordinating both internally within the pod and externally with other teams.",
+          "This person should be technically minded, organised, a great communicator and someone who is committed to continuous improvement.",
+        ],
+      },
+      {
+        jobTitle: "Head of Delivery (m/f/d)",
+        url: "https://fortris.jobs.personio.com/job/1237580?language=en&display=en",
+        descriptionInParagrapgs: [
+          "The role of the Head of Delivery is to manage and coordinate multiple software delivery value streams. You will be an experienced Agile practitioner with a solid technical background with a focus on continuous improvement and delivery efficiency.",
+          "You will also support professional development of the delivery team working with other heads of roles to promote effective cross-functional delivery.",
+        ],
+      },
+      {
+        jobTitle: "Java Software Engineer (m/f/d)",
+        url: "https://fortris.jobs.personio.com/job/322932?language=en&display=en",
+        descriptionInParagrapgs: [
+          "We are looking for a Java Software Engineer with a strong passion for problem solving and attention to detail to join our team.",
+        ],
+      },
+      {
+        jobTitle: "JavaScript Software Engineer (m/f/d)",
+        url: "https://fortris.jobs.personio.com/job/1151013?language=en&display=en",
+        descriptionInParagrapgs: [
+          "We are looking for a JavaScript Software Engineer with a strong passion for problem-solving and attention to detail to join our team in Malaga.",
+          "Working within the core Delivery team, the successful candidate will be someone who can bridge the gap between graphical design / UX and technical implementation, taking an active role on both sides. Your duties will include leading a small team of skilled developers as well as researching and introducing new technology.",
+        ],
+      },
+    ],
   },
   {
     name: "Freepik",
@@ -620,6 +660,13 @@ export const sponsors = [
     tier: "community",
     url: "https://www.yeswetech.org/",
     hasFeaturedPage: false,
+  },
+  {
+    hasFeaturedPage: false,
+    tier: "supporter",
+    name: "ETSI Informática, Universidad de Málaga",
+    url: "https://www.uma.es/etsi-informatica/",
+    picture: "/sponsors/etsi-informatica.png",
   },
 ] as const satisfies ReadonlyArray<Sponsor>;
 
@@ -760,19 +807,6 @@ const team = {
       ],
       socials: {
         linkedin: "https://www.linkedin.com/in/cesardasseville",
-      },
-    },
-    {
-      name: "Basilio David Gómez",
-      picture: "/team/basilio-gomez.jpg",
-      descriptionInParagraphs: [
-        "Soy un desarrollador movido por el amor a este nuevo mundo; la informática.",
-        "Actualmente centrado en el desarrollo web, específicamente en el backend, usando tecnologías como NestJs.",
-      ],
-      position: "Software Developer, Max Gain Development.",
-      socials: {
-        linkedin:
-          "https://www.linkedin.com/in/basilio-david-g%C3%B3mez-fern%C3%A1ndez-6a1631185/",
       },
     },
     {
