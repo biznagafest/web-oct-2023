@@ -939,6 +939,10 @@ export const DATA: Data = {
   events,
   footerLinks: [
     {
+      title: "Ofertas de empleo de Fortris",
+      href: "/sponsor/Fortris",
+    },
+    {
       title: "Code Of Conduct",
       href: "/code",
     },
