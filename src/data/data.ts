@@ -234,7 +234,7 @@ export const schedules: Schedule[] = [
           "Under the hood of decentralized technology: Examining scalability and security",
         subtitle: "Álvaro López",
         description:
-          "In this talk, Jecelyn will dig into the modern state of debugging, improvements in DevTools, and how you can use them to reliably debug your apps.",
+          "This talk examines everything no one tells you about blockchain as a decentralized distributed system: challenges of balancing security and scalability. It covers the costs of improving performance, known challenges in blockchain platforms, and the issue of centralization in decentralized systems. It visits the known-unknown security attacks case per case.",
         type: "lecture",
       },
       {
