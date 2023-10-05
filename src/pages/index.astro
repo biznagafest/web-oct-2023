@@ -9,6 +9,7 @@ import Accordion from "../components/Accordion";
 import TicketSection from "../components/TicketSection";
 import type { Sponsor as ISponsor, SponsorTier } from "../data/data.type";
 import TeamMember from "../components/TeamMember.astro";
+import Notice from "../components/Notice.astro";
 
 function formatDate(date: Date) {
   const formatter = new Intl.DateTimeFormat("es-ES", {
@@ -274,7 +275,22 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
           <AnimatedOnViewportEnter
             animation="animate__animated animate__fadeIn"
           >
-            <TicketSection tickets={DATA.tickets} client:only />
+            <div class="flex flex-col gap-5">
+              <TicketSection tickets={DATA.tickets} client:only />
+              <Notice>
+                <div
+                  class="bg-blue-200 dark:bg-red-400 w-fit p-5 rounded-md flex flex-col gap-2"
+                >
+                  <h3 class="title font-semibold text-lg">
+                    ✨¡No te quedes sin tu swag!✨
+                  </h3>
+                  <p class="text">
+                    Regalaremos swag de recuerdo para los primeros 450
+                    asistentes!
+                  </p>
+                </div>
+              </Notice>
+            </div>
           </AnimatedOnViewportEnter>
         </div>
       </section>
@@ -311,6 +327,10 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
               Ubicación
             </h2>
           </AnimatedOnViewportEnter>
+
+          <h3 class="text-xl font-semibold">
+            ETSI Informática, Universidad de Málaga
+          </h3>
 
           <p>Para llegar al evento puedes usar:</p>
 
