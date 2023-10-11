@@ -10,7 +10,7 @@ export interface Props {
 const { title, lang, description } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
@@ -33,6 +33,10 @@ const { title, lang, description } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
       @font-face {
         font-family: "Manrope";
         src: url("/fonts/Manrope/Manrope-VariableFont_wght.ttf")
