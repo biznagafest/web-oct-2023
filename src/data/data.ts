@@ -174,6 +174,17 @@ export const schedules: Schedule[] = [
     type: "break",
     events: [
       {
+        time_start: "8.30",
+        time_end: "8.55",
+        title: "Check In",
+        subtitle: "Bienvenidos al BiznagaFest 2023",
+      },
+    ],
+  },
+  {
+    type: "break",
+    events: [
+      {
         time_start: "9.00",
         time_end: "9.15",
         title: "Welcome",
