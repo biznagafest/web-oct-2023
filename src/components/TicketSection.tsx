@@ -36,6 +36,7 @@ const TicketSection = ({ tickets }: { tickets: ReadonlyArray<Ticket> }) => {
           <a
             className="w-fit rounded-lg bg-blue-600 py-2 px-6 text-white mx-auto md:mx-6 font-semibold"
             href={DATA.ticketsUrl}
+            target="_blank"
           >
             Comprar Entradas
           </a>
