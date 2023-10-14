@@ -476,6 +476,19 @@ export const events = [
 
 export const tickets = [
   {
+    name: "Last Dance",
+    price: 22.5,
+    url: "https://example.com/ticket1",
+    perks: [
+      "Acceso al área reservado de patrocinadores",
+      "Coffee Break (varios)",
+      "Almuerzo",
+      "Café durante todo el día",
+      "Regalos valorados en 15€",
+      "Sorteos valorados en 300€",
+    ],
+  },
+  {
     name: "Estudiante",
     price: 8.5,
     url: "https://example.com/ticket1",
@@ -544,19 +557,6 @@ export const tickets = [
       "Sorteos valorados en 300€",
     ],
     isSoldOut: true,
-  },
-  {
-    name: "Last Dance",
-    price: 22.5,
-    url: "https://example.com/ticket1",
-    perks: [
-      "Acceso al área reservado de patrocinadores",
-      "Coffee Break (varios)",
-      "Almuerzo",
-      "Café durante todo el día",
-      "Regalos valorados en 15€",
-      "Sorteos valorados en 300€",
-    ],
   },
 ] as const satisfies ReadonlyArray<Ticket>;
 
