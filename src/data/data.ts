@@ -487,6 +487,7 @@ export const tickets = [
       "Regalos valorados en 15€",
       "Sorteos valorados en 300€",
     ],
+    isSoldOut: true,
   },
   {
     name: "General",
@@ -500,6 +501,7 @@ export const tickets = [
       "Regalos valorados en 15€",
       "Sorteos valorados en 300€",
     ],
+    isSoldOut: true,
   },
   {
     name: "Summer",
@@ -528,6 +530,33 @@ export const tickets = [
       "Sorteos valorados en 300€",
     ],
     isSoldOut: true,
+  },
+  {
+    name: "Summer",
+    price: 15.5,
+    url: "https://example.com/ticket1",
+    perks: [
+      "Acceso al área reservado de patrocinadores",
+      "Coffee Break (varios)",
+      "Almuerzo",
+      "Café durante todo el día",
+      "Regalos valorados en 15€",
+      "Sorteos valorados en 300€",
+    ],
+    isSoldOut: true,
+  },
+  {
+    name: "Last Dance",
+    price: 22.5,
+    url: "https://example.com/ticket1",
+    perks: [
+      "Acceso al área reservado de patrocinadores",
+      "Coffee Break (varios)",
+      "Almuerzo",
+      "Café durante todo el día",
+      "Regalos valorados en 15€",
+      "Sorteos valorados en 300€",
+    ],
   },
 ] as const satisfies ReadonlyArray<Ticket>;
 
