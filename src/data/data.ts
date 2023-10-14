@@ -544,20 +544,6 @@ export const tickets = [
     ],
     isSoldOut: true,
   },
-  {
-    name: "Summer",
-    price: 15.5,
-    url: "https://example.com/ticket1",
-    perks: [
-      "Acceso al área reservado de patrocinadores",
-      "Coffee Break (varios)",
-      "Almuerzo",
-      "Café durante todo el día",
-      "Regalos valorados en 15€",
-      "Sorteos valorados en 300€",
-    ],
-    isSoldOut: true,
-  },
 ] as const satisfies ReadonlyArray<Ticket>;
 
 export const sponsors = [
