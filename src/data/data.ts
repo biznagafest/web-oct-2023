@@ -1,5 +1,6 @@
 import type {
   Data,
+  Draw,
   Event,
   FAQ,
   Schedule,
@@ -592,6 +593,10 @@ const faq = [
   },
 ] as const satisfies ReadonlyArray<FAQ>;
 
+
+const draws = [
+] as const satisfies ReadonlyArray<Draw>;
+
 const team = {
   organizers: [
     {
@@ -754,6 +759,7 @@ export const DATA: Data = {
   sponsors,
   speakers,
   schedules,
+  draws,
   events,
   footerLinks: [
     {

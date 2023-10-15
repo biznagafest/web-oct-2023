@@ -39,7 +39,7 @@ import If from "./utils/If.astro";
     <ul
       class="flex justify-evenly gap-2 text-sm flex-col lg:flex-row font-bold"
     >
-        <If condition={!!DATA.schedules.length}>
+      <If condition={!!DATA.schedules.length}>
         <li
           class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
         >
@@ -51,6 +51,13 @@ import If from "./utils/If.astro";
           class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
         >
           <a href="/#speakers" class="px-3"> Speakers</a>
+        </li>
+      </If>
+      <If condition={!!DATA.draws.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/draws" class="px-3"> Sorteos</a>
         </li>
       </If>
       <If condition={!!DATA.faq.length}>
