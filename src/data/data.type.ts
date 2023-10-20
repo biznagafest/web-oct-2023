@@ -99,7 +99,7 @@ export interface FAQ {
   body: string;
 }
 
-export interface Draw {
+export interface Raffle {
   url: string;
   description: string;
 }
@@ -159,5 +159,5 @@ export type Data = {
   lastEditionVideoUrl?: Nullish<string>;
   faq: ReadonlyArray<FAQ>;
   footerLinks: ReadonlyArray<FooterLink>;
-  draws: ReadonlyArray<Draw>;
+  raffles: ReadonlyArray<Raffle>;
 };

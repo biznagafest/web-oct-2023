@@ -1,12 +1,12 @@
 ---
-import Draw from "../../components/Draw.astro";
+import Raffle from "../../components/Raffle.astro";
 import AnimatedOnViewportEnter from "../../components/utils/AnimatedOnViewportEnter.astro";
 import { DATA } from "../../data/data";
 import Layout from "../../layouts/Layout.astro";
 
 ---
 
-<Layout title={"Sorteos"} description={""} lang="es">
+<Layout title={"Sorteos"} description="¡Bienvenido a BiznagaFest, la fiesta tecnológica que estabas esperando! Participa en nuestros sorteos y gana libros de programación, un Kindle de Amazon, cascos de alta calidad y un Firestick. Un evento imperdible para amantes de la tecnología. ¡Súmate a la diversión en BiznagaFest!" lang="es">
     <main>
         <section id="draws">
             <div class="bg-blue-50 dark:bg-blue-900 text-dark-background dark:text-light-background">
@@ -23,11 +23,11 @@ import Layout from "../../layouts/Layout.astro";
 
             <div class="py-20">
                 {
-                    DATA.draws.map( (draw, key) => {
+                    DATA.raffles.map( (raffle, key) => {
                         let reverse = key % 2 === 0;
 
                         return (
-                            <Draw draw={draw} reverse={reverse} />
+                            <Raffle raffle={raffle} reverse={reverse} />
                         )
                     })
                 }
