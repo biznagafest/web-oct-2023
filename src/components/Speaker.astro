@@ -24,7 +24,7 @@ const { speaker, index } = Astro.props;
   <div
     class="flex flex-col align-middle justify-center gap-1 md:gap-3 py-[0px] text-center lg:text-left"
   >
-    <h4 class="text-2xl font-bold">{speaker.name}</h4>
+    <h3 class="text-2xl font-bold">{speaker.name}</h3>
 
     <If condition={speaker.position !== undefined}>
       <span class="text-sm">{speaker.position}</span>
