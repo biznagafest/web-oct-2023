@@ -58,6 +58,13 @@ import If from "./utils/If.astro";
           >
         </li>
       </If>
+      <If condition={!!DATA.raffles.length}>
+        <li
+          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+        >
+          <a href="/raffles" class="px-3"> Sorteos</a>
+        </li>
+      </If>
       <If condition={!!DATA.faq.length}>
         <li>
           <a

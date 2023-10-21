@@ -13,7 +13,7 @@ const { member, index, kind } = Astro.props;
   <span class="flex flex-col align-middle justify-center">
     <img
       loading="lazy"
-      class="object-cover h-full shadow-md"
+      class="object-cover h-full shadow-md aspect-square"
       src={member.picture}
       alt={`Picture of ${member.name}`}
     />

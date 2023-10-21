@@ -1,0 +1,22 @@
+---
+
+interface Props {
+  raffle: any;
+  reverse: boolean
+}
+
+const { raffle, reverse } = Astro.props;
+
+---
+
+<div class:list={{
+   "flex-col sm:flex sm:flex-row gap-8 sm:gap-4 py-10" : !reverse,
+   "bg-yellow-100 flex flex-col flex-col-reverse sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10": reverse
+}}>
+    <div class="flex justify-center sm:w-1/2">
+        <img class="max-w-xs" src={raffle.url} alt="lorem ipsum present">
+    </div>
+    <div class="flex flex-col sm:justify-center sm:w-1/2 px-4">
+        {raffle.description}
+    </div>
+</div>

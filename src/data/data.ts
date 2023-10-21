@@ -1,5 +1,6 @@
 import type {
   Data,
+  Raffle,
   Event,
   FAQ,
   Schedule,
@@ -727,6 +728,10 @@ const faq = [
   },
 ] as const satisfies ReadonlyArray<FAQ>;
 
+
+const raffles = [
+] as const satisfies ReadonlyArray<Raffle>;
+
 const team = {
   organizers: [
     {
@@ -962,6 +967,7 @@ export const DATA: Data = {
   sponsors,
   speakers,
   schedules,
+  raffles,
   events,
   footerLinks: [
     {
