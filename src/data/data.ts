@@ -831,6 +831,24 @@ const team = {
   ],
   staff: [
     {
+      name: "Francisco Lara",
+      picture: "/team/fran-lara.jpeg",
+      descriptionInParagraphs: [],
+      socials: {
+        linkedin: "https://www.linkedin.com/in/francisco-lara-natoli/",
+      },
+      position: "Frontend Developer",
+    },
+    {
+      name: "Jose Luís López",
+      picture: "/team/jose-luis-lopez.jpg",
+      descriptionInParagraphs: [],
+      socials: {
+        linkedin:
+          "https://www.linkedin.com/in/jos%C3%A9-luis-l%C3%B3pez-ruiz-2a4794206/",
+      },
+    },
+    {
       name: "César Dasseville",
       picture: "/team/cesar-dasseville.jpg",
       descriptionInParagraphs: [
