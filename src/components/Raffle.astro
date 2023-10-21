@@ -7,11 +7,6 @@ interface Props {
 
 const { raffle, reverse } = Astro.props;
 
-let rowClass = "flex-col sm:flex sm:flex-row gap-8 sm:gap-4 py-10";
-if( reverse ) {
-    rowClass = "bg-yellow-100 flex flex-col flex-col-reverse sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10"
-}
-console.log(reverse);
 ---
 
 <div class:list={{
