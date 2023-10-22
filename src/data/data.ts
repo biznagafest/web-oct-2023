@@ -910,6 +910,11 @@ const team = {
         linkedin: "https://www.linkedin.com/in/javsanpae/",
       },
     },
+    {
+      name: "Valeria Balenciaga",
+      picture: "/team/valeria-balenciaga.jpg",
+      descriptionInParagraphs: [],
+    },
   ],
 } as const satisfies Team;
 
