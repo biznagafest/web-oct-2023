@@ -728,9 +728,7 @@ const faq = [
   },
 ] as const satisfies ReadonlyArray<FAQ>;
 
-
-const raffles = [
-] as const satisfies ReadonlyArray<Raffle>;
+const raffles = [] as const satisfies ReadonlyArray<Raffle>;
 
 const team = {
   organizers: [
@@ -913,6 +911,12 @@ const team = {
     {
       name: "Valeria Balenciaga",
       picture: "/team/valeria-balenciaga.jpg",
+      descriptionInParagraphs: [],
+    },
+    {
+      name: "Daniel Bittan",
+      position: "Web Developer",
+      picture: "/team/daniel-bittan.jpg",
       descriptionInParagraphs: [],
     },
   ],
