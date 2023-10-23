@@ -14,9 +14,13 @@ const { raffle, reverse } = Astro.props;
    "bg-yellow-100 flex flex-col flex-col-reverse sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10": reverse
 }}>
     <div class="flex justify-center sm:w-1/2">
-        <img class="max-w-xs" src={raffle.url} alt="lorem ipsum present">
+        <img class="max-w-sm" src={raffle.url} alt="lorem ipsum present">
     </div>
     <div class="flex flex-col sm:justify-center sm:w-1/2 px-4">
-        {raffle.description}
+        {
+            raffle.descriptionInParagraphs.map( (description) => (
+                <p>{description}</p> <br>
+            ) )
+        }
     </div>
 </div>
