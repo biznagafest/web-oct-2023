@@ -101,7 +101,7 @@ export interface FAQ {
 
 export interface Raffle {
   url: string;
-  description: string;
+  descriptionInParagraphs: ReadonlyArray<string>;
 }
 
 interface PreviousEdition {
