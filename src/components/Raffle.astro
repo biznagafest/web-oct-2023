@@ -1,12 +1,12 @@
 ---
+import type { Raffle } from "../data/data.type";
 
 interface Props {
-  raffle: any;
-  reverse: boolean
+  raffle: Raffle;
+  reverse: boolean;
 }
 
 const { raffle, reverse } = Astro.props;
-
 ---
 
 <div class:list={{
