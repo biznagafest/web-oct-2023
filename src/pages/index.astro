@@ -10,6 +10,7 @@ import TicketSection from "../components/TicketSection";
 import type { Sponsor as ISponsor, SponsorTier } from "../data/data.type";
 import TeamMember from "../components/TeamMember.astro";
 import Notice from "../components/Notice.astro";
+import { CONFIG } from "../data/config";
 
 function formatDate(date: Date) {
   const formatter = new Intl.DateTimeFormat("es-ES", {
@@ -48,6 +49,7 @@ for (const [index, sponsor] of Object.entries(DATA.sponsors)) {
   lang="es"
 >
   <header>
+    {CONFIG.hasWelcomeMessage ? "true" : "false"}
     <section
       id="banner"
       class="h-[400px] bg-green-50 dark:bg-blue-900 w-full flex flex-col gap-3 align-bottom justify-end p-10 md:p-20 overflow-hidden"

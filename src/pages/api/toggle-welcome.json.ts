@@ -1,10 +1,10 @@
 import type { APIRoute } from "astro";
+import { CONFIG } from "../../data/config";
 
 export const POST: APIRoute = async ({ params, request }) => {
-  return new Response(
-    JSON.stringify({
-      name: "Astro",
-      url: "https://astro.build/",
-    })
-  );
+  CONFIG.hasWelcomeMessage = !CONFIG.hasWelcomeMessage;
+
+  return new Response(null, {
+    status: 200,
+  });
 };
