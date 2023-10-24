@@ -10,8 +10,8 @@ const { raffle, reverse } = Astro.props;
 ---
 
 <div class:list={{
-   "flex-col sm:flex sm:flex-row gap-8 sm:gap-4 py-10" : !reverse,
-   "bg-yellow-100 flex flex-col flex-col-reverse sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10": reverse
+   "flex flex-col sm:flex sm:flex-row gap-8 sm:gap-4 py-10" : !reverse,
+   "bg-yellow-100 flex flex-col sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10 text-dark-background": reverse
 }}>
     <div class="flex justify-center sm:w-1/2">
         <img class="max-w-sm" src={raffle.url} alt="lorem ipsum present">
