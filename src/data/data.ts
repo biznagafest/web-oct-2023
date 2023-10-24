@@ -390,11 +390,11 @@ export const events = [
     language: "Español",
   },
   {
-    name: "Under the Hood of Decentralized Technology: Examining Scalability and Security",
+    name: "Bajo la superficie de la tecnología descentralizada: examinando la escalabilidad y la seguridad",
     descriptionInParagraphs: [
-      "This talk examines everything no one tells you about blockchain as a decentralized distributed system: challenges of balancing security and scalability.",
-      "It covers the costs of improving performance, known challenges in blockchain platforms, and the issue of centralization in decentralized systems.",
-      "It visits the known-unknown security attacks case per case.",
+      "En esta charla examinaremos lo que nadie nos cuenta sobre las tecnologías descentralizadas más conocidas.",
+      "Cuales son los desafíos de seguridad y el coste en escalabilidad que deben asumir para su adopción en el ecosistema de los sistemas distribuidos.",
+      "Destaparemos la realidad centralizada de las redes punto a punto y visitaremos los vectores de ataque más conocidos.",
     ],
     durationInMinutes: 60,
     place: "auditorium",
@@ -731,13 +731,48 @@ const faq = [
 
 const raffles = [
   {
-    url: "fallback/person.png",
+    url: "raffle/regalos.jpeg",
     descriptionInParagraphs: [
-      "¡La fiesta de clausura se acerca! 🚀 En nuestro Kahoot tech, no solo te divertirás, sino que también tendrás la oportunidad de ganar libros de programación increíbles que impulsarán tu conocimiento en el mundo de la tecnología. 📚",
-      "Si eres un entusiasta de la tecnología, este evento es simplemente imprescindible. 💻🎉 Imagina una tarde llena de emoción, risas y desafíos mientras compites con otros amantes de la tecnología en un Kahoot que pondrá a prueba tus conocimientos y habilidades. Pero eso no es todo, ¡también hay premios en juego!",
-      "Asegura tu lugar y prepárate para una experiencia única que te llevará a casa no solo con recuerdos, sino también con conocimientos tecnológicos adicionales. ¡No te lo puedes perder!"
+      "¡Biznagafest está a punto de despegar! En este emocionante evento de programación, los 450 primeros inscritos serán recompensados con una camiseta exclusiva del evento, un altavoz mini y una práctica bolsa. Regístrate ahora y prepárate para sumergirte en el mundo de la codificación. 🚀💻🎉 #Biznagafest #Programación #Málaga"
     ]
-  }
+  },
+  {
+    url: "raffle/sorteo4.jpeg",
+    descriptionInParagraphs: [
+      '¡El Kahoot del Biznagafest va a ser una locura! ¿Por qué? Porque las preguntas no solo desafiarán tu ingenio, ¡sino que también te traerán lo último en tecnología gracias a nuestros patrocinadores! 🎮📱',
+      "Los 3 más astutos se llevarán a casa libros de Clean Code y Clean Architecture para llevar tu programación al siguiente nivel 📚💻, junto con un Kindle brillante y portátil 📱. ¿Te preguntas por qué estamos tan emocionados? ¡Porque las preguntas del Kahoot vendrán directamente de nuestros increíbles patrocinadores, así que además de aprender, podrías llevarte premios épicos que solo los verdaderos conocedores de la tecnología podrán apreciar. ¿Estás listo para este desafío lleno de sorpresas? ¡Únete a la diversión y prepárate para competir y aprender como un campeón! 🚀🧠 #Biznagafest #Kahoot #PremiosGeniales"
+    ]
+  },
+  {
+    url: "raffle/sorteo2.jpeg",
+    descriptionInParagraphs: [
+      '¡Prepárate para un concurso divertido en el Biznagafest! ¿Eres un artista en potencia? 🎨 ¡Demuéstralo! Sube una foto de tu acreditación con un dibujo creativo y participa en nuestro concurso en Twitter. El twit con más "Me gusta" y el hashtag #Biznagafest se llevará a casa un increíble Firestick 🔥.',
+      'Pero eso no es todo, ¡asegúrate de seguir a @BiznagaFest en Twitter para participar! ¿Tienes lo necesario para ganar? ¡Muestra tu talento y participa para tener la oportunidad de llevarte este premio genial! 📸💡 #Biznagafest #ConcursoTwitter #DibujoCreativo'
+    ]
+  },
+  {
+    url: "raffle/sorteo3.jpeg",
+    descriptionInParagraphs: [
+      '¡Aventúrate por el Biznagafest y descubre los tesoros que nuestros patrocinadores tienen para ti! 🛍️',
+      'Pasa por los stands de nuestros patrocinadores y recibe un sello en tu acreditación en cada uno. ¡Cuando tengas todos los sellos, entrarás en un sorteo especial! 🤝',
+      'Los afortunados podrán ganar unos impresionantes cascos Sony INZONE H3 🎧. Así que, explora, conoce a nuestros patrocinadores y ten la oportunidad de llevarte un premio genial. ¡Buena suerte a todos los participantes! 🤞💼 #Biznagafest #Patrocinadores #Sorteo'
+    ]
+  },
+  {
+    url: "raffle/sorteo1.jpeg",
+    descriptionInParagraphs: [
+      '¡Prepárate para desatar tu lado más creativo en el Biznagafest! 🎉',
+      '¿Eres un maestro del meme? ¡Demuéstralo! Crea memes divertidos y originales relacionados con el evento y súbelos a Twitter con el hashtag #Biznagafest. Pero eso no es todo, asegúrate de seguirnos en @BiznagaFest para participar.',
+      'Los memes con más "Me gusta" ganarán premios increíbles, incluyendo libros de Clean Code, Clean Architecture y el best-seller "Hábitos Atómicos" 📚. ¡Demuestra tu ingenio y participa para tener la oportunidad de llevarte estos valiosos tesoros de conocimiento! 🚀💡 #ConcursoMemes #Biznagafest'
+    ]
+  },
+  {
+    url: "raffle/darkvader.jpeg",
+    descriptionInParagraphs: [
+      '¡Atención a todos los amantes de Star Wars! En el coffee break de las 17:30 en nuestro booth, "Fortris" sorteará un impresionante Lego de Darth Vader. Para participar, simplemente pasa por su stand durante el día y deja tu participación en la urna.',
+      'Aquí viene la emoción: ¡debes estar presente en el momento del sorteo para reclamar tu premio! Si no estás allí, sacaremos otra papeleta hasta que el premio tenga un dueño o dueña. No querrás perderte la oportunidad de llevarte este increíble premio. ¡Que la Fuerza te acompañe! 🌌✨ #Biznagafest #SorteoFortris #DarthVaderLego'
+    ]
+  },
 ] as const satisfies ReadonlyArray<Raffle>;
 
 const team = {
