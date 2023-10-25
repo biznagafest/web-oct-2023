@@ -1,6 +1,9 @@
 ---
+import Dialog from "../components/Caption";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
+import { CONFIG } from "../data/config";
+
 export interface Props {
   title: string;
   lang: string;
@@ -8,6 +11,8 @@ export interface Props {
 }
 
 const { title, lang, description } = Astro.props;
+
+let isCaptionOpen = CONFIG.hasWelcomeMessage;
 ---
 
 <!doctype html>
@@ -60,6 +65,10 @@ const { title, lang, description } = Astro.props;
   <body
     class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
   >
+    <Dialog isEnabled={isCaptionOpen} client:only>
+      <h1>Hello!</h1>
+      <p>this is a test</p>
+    </Dialog>
     <div class="overflow-hidden min-h-screen flex flex-col justify-between">
       <div>
         <Navigation />
@@ -76,12 +85,12 @@ const { title, lang, description } = Astro.props;
       const animations = [...document.querySelectorAll(".animate")];
       const callback = (
         entries: IntersectionObserverEntry[],
-        observer: IntersectionObserver
+        observer: IntersectionObserver,
       ) => {
         entries.forEach((entry: IntersectionObserverEntry) => {
-          let animationClasses =
-            entry.target.getAttribute("data-animation") ?? "";
-          animationClasses = animationClasses.split(" ");
+          let animationClasses = (
+            entry.target.getAttribute("data-animation") ?? ""
+          ).split(" ");
 
           if (entry.isIntersecting) {
             if (
@@ -92,7 +101,7 @@ const { title, lang, description } = Astro.props;
               return;
             }
             entry.target.setAttribute("data-animation-repeated", "true");
-            animationClasses.forEach((className: any) => {
+            animationClasses.forEach((className) => {
               entry.target.classList.add(className);
             });
             if (entry.target.classList.contains("invisible")) {
@@ -102,7 +111,7 @@ const { title, lang, description } = Astro.props;
             !entry.isIntersecting &&
             entry.boundingClientRect.top > 0
           ) {
-            animationClasses.forEach((className: any) => {
+            animationClasses.forEach((className) => {
               entry.target.classList.remove(className);
             });
           }
