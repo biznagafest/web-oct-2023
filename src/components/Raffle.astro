@@ -1,23 +1,38 @@
 ---
+import type { Raffle } from "../data/data.type";
 interface Props {
-  raffle: any;
-  reverse: boolean;
+  raffle: Raffle;
+  isEven: boolean;
 }
 
-const { raffle, reverse } = Astro.props;
+const { raffle, isEven } = Astro.props;
 ---
 
-<div
+<article
   class:list={{
-    "flex-col sm:flex sm:flex-row gap-8 sm:gap-4 py-10": !reverse,
-    "bg-yellow-100 flex flex-col sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10 text-dark-background":
-      reverse,
+    "bg-yellow-100 text-dark-background": isEven,
   }}
 >
-  <div class="flex justify-center sm:w-1/2">
-    <img class="max-w-sm" src={raffle.url} alt="Raffle image" />
+  <div
+    class="wrapper flex-col flex gap-8 sm:gap-4"
+    class:list={{
+      "sm:flex-row": !isEven,
+      "sm:flex-row-reverse": isEven,
+    }}
+  >
+    <div class="flex justify-center sm:w-1/2 bg-green-50 aspect-square">
+      <img
+        class="w-full aspect-square object-contain"
+        src={raffle.url}
+        alt="Raffle image"
+      />
+    </div>
+    <div class="flex flex-col sm:justify-center sm:w-1/2 px-4 gap-4">
+      {
+        raffle.descriptionInParagraphs.map((description) => (
+          <p>{description}</p>
+        ))
+      }
+    </div>
   </div>
-  <div class="flex flex-col sm:justify-center sm:w-1/2 px-4 gap-4">
-    {raffle.descriptionInParagraphs.map((description) => <p>{description}</p>)}
-  </div>
-</div>
+</article>

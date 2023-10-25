@@ -26,12 +26,12 @@ export const prerender = true;
         </div>
       </div>
 
-      <div class="py-20">
+      <div class="py-20 flex flex-col gap-10">
         {
           DATA.raffles.map((raffle, key) => {
-            let reverse = key % 2 === 0;
+            let isEven = key % 2 === 0;
 
-            return <Raffle raffle={raffle} reverse={reverse} />;
+            return <Raffle raffle={raffle} isEven={isEven} />;
           })
         }
       </div>
