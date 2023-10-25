@@ -14,10 +14,10 @@ export const prerender = false;
 
 const { title, lang, description } = Astro.props;
 
-const protocol = import.meta.env.PROD ? "https" : "http";
+// const protocol = import.meta.env.PROD ? "https" : "http";
 
 const isOpen = await fetch(
-  `${protocol}://${import.meta.env.VERCEL_URL}/api/is-open.json`,
+  `https://${import.meta.env.VERCEL_URL}/api/is-open.json`,
 )
   .then((res) => res.json())
   .then((res2) => {
