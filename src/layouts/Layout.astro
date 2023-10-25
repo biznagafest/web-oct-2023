@@ -1,5 +1,5 @@
 ---
-import Dialog from "../components/Caption";
+import Caption from "../components/Caption";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import { CONFIG } from "../data/config";
@@ -65,10 +65,10 @@ const { title, lang, description } = Astro.props;
   <body
     class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
   >
-    <Dialog client:only>
+    <Caption client:only>
       <h1>Hello!</h1>
       <p>this is a test</p>
-    </Dialog>
+    </Caption>
     <div class="overflow-hidden min-h-screen flex flex-col justify-between">
       <div>
         <Navigation />

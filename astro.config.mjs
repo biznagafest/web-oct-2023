@@ -11,4 +11,9 @@ export default defineConfig({
     analytics: true,
     edgeMiddleware: true,
   }),
+  server: {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  },
 });
