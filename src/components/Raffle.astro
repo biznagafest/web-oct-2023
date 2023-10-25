@@ -1,8 +1,6 @@
 ---
-import type { Raffle } from "../data/data.type";
-
 interface Props {
-  raffle: Raffle;
+  raffle: any;
   reverse: boolean;
 }
 
@@ -12,21 +10,14 @@ const { raffle, reverse } = Astro.props;
 <div
   class:list={{
     "flex-col sm:flex sm:flex-row gap-8 sm:gap-4 py-10": !reverse,
-    "bg-yellow-100 flex flex-col flex-col-reverse sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10":
+    "bg-yellow-100 flex flex-col sm:flex-row sm:flex-row-reverse gap-8 sm:gap-4 py-10 text-dark-background":
       reverse,
   }}
 >
   <div class="flex justify-center sm:w-1/2">
-    <img class="max-w-sm" src={raffle.url} alt="lorem ipsum present" />
+    <img class="max-w-sm" src={raffle.url} alt="Raffle image" />
   </div>
-  <div class="flex flex-col sm:justify-center sm:w-1/2 px-4">
-    {
-      raffle.descriptionInParagraphs.map((description) => (
-        <>
-          <p>{description}</p>
-          <br />
-        </>
-      ))
-    }
+  <div class="flex flex-col sm:justify-center sm:w-1/2 px-4 gap-4">
+    {raffle.descriptionInParagraphs.map((description) => <p>{description}</p>)}
   </div>
 </div>
