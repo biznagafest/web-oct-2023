@@ -1,11 +1,22 @@
 import { useState, type ReactNode } from "react";
 
 interface Props {
-  isEnabled: boolean;
   children: ReactNode;
 }
 
-const Dialog = ({ isEnabled, children }: Props) => {
+const Dialog = async ({ children }: Props) => {
+  const protocol = import.meta.env.PROD ? "https" : "http";
+
+  const isEnabled = await fetch(
+    `${protocol}://${import.meta.env.PUBLIC_VERCEL_URL}/api/is-open.json`,
+  )
+    .then((res) => res.json())
+    .then((res2) => {
+      console.log(res2);
+
+      return res2.isOpen;
+    });
+
   const [open, setIsOpen] = useState(true);
 
   if (!isEnabled || !open) {

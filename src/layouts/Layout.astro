@@ -13,16 +13,6 @@ export interface Props {
 export const prerender = false;
 
 const { title, lang, description } = Astro.props;
-
-// const protocol = import.meta.env.PROD ? "https" : "http";
-
-const isOpen = await fetch(
-  `https://${import.meta.env.PUBLIC_VERCEL_URL}/api/is-open.json`,
-).then((res2) => {
-  console.log(res2);
-
-  return true;
-});
 ---
 
 <!doctype html>
@@ -75,7 +65,7 @@ const isOpen = await fetch(
   <body
     class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
   >
-    <Dialog isEnabled={isOpen} client:only>
+    <Dialog client:only>
       <h1>Hello!</h1>
       <p>this is a test</p>
     </Dialog>
