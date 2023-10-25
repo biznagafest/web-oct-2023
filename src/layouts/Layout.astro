@@ -18,13 +18,11 @@ const { title, lang, description } = Astro.props;
 
 const isOpen = await fetch(
   `https://${import.meta.env.PUBLIC_VERCEL_URL}/api/is-open.json`,
-)
-  .then((res) => res.json())
-  .then((res2) => {
-    console.log(res2);
+).then((res2) => {
+  console.log(res2);
 
-    return res2.isOpen;
-  });
+  return true;
+});
 ---
 
 <!doctype html>
