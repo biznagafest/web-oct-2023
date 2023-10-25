@@ -31,7 +31,11 @@ export const prerender = true;
           DATA.raffles.map((raffle, key) => {
             let isEven = key % 2 === 0;
 
-            return <Raffle raffle={raffle} isEven={isEven} />;
+            return (
+              <AnimatedOnViewportEnter animation="animate__animated animate__fadeIn">
+                <Raffle raffle={raffle} isEven={isEven} />
+              </AnimatedOnViewportEnter>
+            );
           })
         }
       </div>

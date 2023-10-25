@@ -10,7 +10,8 @@ const { raffle, isEven } = Astro.props;
 
 <article
   class:list={{
-    "bg-yellow-100 text-dark-background": isEven,
+    "bg-yellow-100 dark:bg-green-900 text-dark-background dark:text-white":
+      isEven,
   }}
 >
   <div
