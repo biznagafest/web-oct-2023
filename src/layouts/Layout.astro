@@ -17,7 +17,7 @@ const { title, lang, description } = Astro.props;
 const protocol = import.meta.env.PROD ? "https" : "http";
 
 const isOpen = await fetch(
-  `${protocol}://${import.meta.env.PUBLIC_VERCEL_ENV}/api/is-open.json`,
+  `${protocol}://${import.meta.env.VERCEL_URL}/api/is-open.json`,
 )
   .then((res) => res.json())
   .then((res2) => {
