@@ -4,7 +4,7 @@ import { CONFIG } from "../../data/config";
 export const POST: APIRoute = async ({ params, request }) => {
   CONFIG.hasWelcomeMessage = !CONFIG.hasWelcomeMessage;
 
-  return new Response(null, {
+  return new Response(JSON.stringify(CONFIG), {
     status: 200,
   });
 };

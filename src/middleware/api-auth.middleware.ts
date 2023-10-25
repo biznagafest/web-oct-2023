@@ -1,7 +1,7 @@
 import { defineMiddleware } from "astro:middleware";
 
 export const apiAuthMiddleware = defineMiddleware(async (context, next) => {
-  if (!context.url.pathname.startsWith("/api")) {
+  if (!context.url.pathname.startsWith("/api/toggle")) {
     return next();
   }
 

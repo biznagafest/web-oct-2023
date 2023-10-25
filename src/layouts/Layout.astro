@@ -10,9 +10,17 @@ export interface Props {
   description: string;
 }
 
+export const prerender = false;
+
 const { title, lang, description } = Astro.props;
 
-let isCaptionOpen = CONFIG.hasWelcomeMessage;
+const isOpen = await fetch(`${import.meta.env.VERCEL_URL}/api/is-open.json`)
+  .then((res) => res.json())
+  .then((res2) => {
+    console.log(res2);
+
+    return res2.isOpen;
+  });
 ---
 
 <!doctype html>
@@ -65,7 +73,7 @@ let isCaptionOpen = CONFIG.hasWelcomeMessage;
   <body
     class="bg-light-background dark:bg-dark-background text-dark-background dark:text-light-background"
   >
-    <Dialog isEnabled={isCaptionOpen} client:only>
+    <Dialog isEnabled={isOpen} client:only>
       <h1>Hello!</h1>
       <p>this is a test</p>
     </Dialog>
