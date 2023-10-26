@@ -8,6 +8,7 @@ import type {
   Sponsor,
   Team,
   Ticket,
+  WelcomeBanner,
 } from "./data.type";
 
 export const speakers = [
@@ -989,6 +990,10 @@ const team = {
 
 const gallery: string[] = [];
 
+const welcomeBanner = {
+  isEnabled: false,
+} satisfies Readonly<WelcomeBanner>;
+
 export const DATA: Data = {
   title: "BiznagaFest 2023",
   ticketsUrl:
@@ -1079,4 +1084,5 @@ export const DATA: Data = {
       href: "https://developers.google.com/",
     },
   ],
+  welcomeBanner,
 } as const satisfies Readonly<Data>;

@@ -40,9 +40,9 @@ import If from "./utils/If.astro";
       class="flex justify-evenly gap-2 text-sm flex-col lg:flex-row font-bold"
     >
       <If condition={!!DATA.schedules.length}>
-        <li style="position: relative;">
+        <li>
           <a
-            href="/schedule"
+            href="/schedule#top"
             class="px-3 h-full w-full cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
             >Schedule</a
           >
@@ -61,7 +61,7 @@ import If from "./utils/If.astro";
       <If condition={!!DATA.raffles.length}>
         <li>
           <a
-            href="/raffles"
+            href="/raffles#top"
             class="px-3 h-full w-full cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
           >
             Sorteos</a

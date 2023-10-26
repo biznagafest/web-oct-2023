@@ -94,6 +94,10 @@ export interface Ticket {
   notice?: Nullish<string>;
 }
 
+export interface WelcomeBanner {
+  isEnabled: boolean;
+}
+
 export interface FAQ {
   title: string;
   body: string;
@@ -160,4 +164,5 @@ export type Data = {
   faq: ReadonlyArray<FAQ>;
   footerLinks: ReadonlyArray<FooterLink>;
   raffles: ReadonlyArray<Raffle>;
+  welcomeBanner: WelcomeBanner;
 };
