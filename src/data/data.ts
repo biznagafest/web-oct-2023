@@ -775,11 +775,11 @@ const raffles = [
   {
     url: "raffles/freepik.png",
     descriptionInParagraphs: [
-      '¡No te pierdas nuestro emocionante sorteo en BiznagaFest! 🎉 Participa y podrías ganar estos fabulosos premios:',
+      "¡No te pierdas este emocionante sorteo en el stand de Freepik! 🎉 Participa y podrías ganar estos fabulosos premios:",
       "1️⃣er Premio: ¡Auriculares inalámbricos Corsair HS80 RGB! 🎧🌈",
       "2️⃣do Premio: Tarjeta regalo de 100 euros de Amazon. 💳💰",
       "3️⃣er Premio: Un Alexa Echo Dot (5ª generación). 🗣️📦",
-      "¡Es fácil! Regístrate en nuestro stand a través del QR. ¡Buena suerte a todos! 🍀 #SorteoBiznagaFest #PremiosGeniales"
+      "¡Es fácil! Solo tienes que registrarte en el stand de Freepik. ¡Buena suerte a todos! 🍀 #SorteoBiznagaFest #PremiosGeniales",
     ],
   },
   {
@@ -789,7 +789,7 @@ const raffles = [
       "1️⃣ Para participar en el SORTEO BOOTCAMP MODALIDAD A TU RITMO, simplemente busca a nuestro astronauta, tómate una foto con él y luego síguenos en Twitter y/o Instagram. Comparte la foto en ambas redes mencionándonos para tener el doble de oportunidades de ganar.",
       "2️⃣ En nuestra RULETA DE LA SUERTE, podrás girar la ruleta y ganar una beca del 100% para nuestro nuevo curso de Desarrollo Mobile. ¡La suerte podría estar de tu lado!",
       "3️⃣ Además, jugaremos a ¿HACEMOS MATCH? junto con Fill The Gap. Usaremos una divertida aplicación estilo Tinder, donde podrás decidir si prefieres nuestra app o sitio web. Responde correctamente a la pregunta relacionada con nuestras formaciones para ganar.",
-      "¡Esperamos verte en el stand de CODE SPACE en BiznagaFest para disfrutar de estas emocionantes actividades! 🌐🎈 #BiznagaFest2023 #CODESPACE #DiversiónYTEC"
+      "¡Esperamos verte en el stand de CODE SPACE en BiznagaFest para disfrutar de estas emocionantes actividades! 🌐🎈 #BiznagaFest2023 #CODESPACE #DiversiónYTEC",
     ],
   },
 ] as const satisfies ReadonlyArray<Raffle>;
