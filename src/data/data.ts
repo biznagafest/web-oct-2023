@@ -488,6 +488,7 @@ export const tickets = [
       "Regalos valorados en 15€",
       "Sorteos valorados en 300€",
     ],
+    isSoldOut: true,
   },
   {
     name: "Estudiante",
