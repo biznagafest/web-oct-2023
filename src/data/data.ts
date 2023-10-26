@@ -8,6 +8,7 @@ import type {
   Sponsor,
   Team,
   Ticket,
+  WelcomeBanner,
 } from "./data.type";
 
 export const speakers = [
@@ -593,16 +594,15 @@ const faq = [
   },
 ] as const satisfies ReadonlyArray<FAQ>;
 
-
 const raffles = [
   {
     url: "fallback/person.png",
     descriptionInParagraphs: [
       "¡La fiesta de clausura se acerca! 🚀 En nuestro Kahoot tech, no solo te divertirás, sino que también tendrás la oportunidad de ganar libros de programación increíbles que impulsarán tu conocimiento en el mundo de la tecnología. 📚",
       "Si eres un entusiasta de la tecnología, este evento es simplemente imprescindible. 💻🎉 Imagina una tarde llena de emoción, risas y desafíos mientras compites con otros amantes de la tecnología en un Kahoot que pondrá a prueba tus conocimientos y habilidades. Pero eso no es todo, ¡también hay premios en juego!",
-      "Asegura tu lugar y prepárate para una experiencia única que te llevará a casa no solo con recuerdos, sino también con conocimientos tecnológicos adicionales. ¡No te lo puedes perder!"
-    ]
-  }
+      "Asegura tu lugar y prepárate para una experiencia única que te llevará a casa no solo con recuerdos, sino también con conocimientos tecnológicos adicionales. ¡No te lo puedes perder!",
+    ],
+  },
 ] as const satisfies ReadonlyArray<Raffle>;
 
 const team = {
@@ -697,6 +697,10 @@ const team = {
 
 const gallery: string[] = [];
 
+const welcomeBanner = {
+  isEnabled: false,
+} satisfies Readonly<WelcomeBanner>;
+
 export const DATA: Data = {
   title: "BiznagaFest 2023",
   ticketsUrl:
@@ -783,4 +787,5 @@ export const DATA: Data = {
       href: "https://developers.google.com/",
     },
   ],
+  welcomeBanner,
 } as const satisfies Readonly<Data>;
