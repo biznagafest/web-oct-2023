@@ -59,10 +59,13 @@ import If from "./utils/If.astro";
         </li>
       </If>
       <If condition={!!DATA.raffles.length}>
-        <li
-          class="cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
-        >
-          <a href="/raffles" class="px-3"> Sorteos</a>
+        <li>
+          <a
+            href="/raffles"
+            class="px-3 h-full w-full cursor-pointer grid place-content-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+          >
+            Sorteos</a
+          >
         </li>
       </If>
       <If condition={!!DATA.faq.length}>
@@ -93,8 +96,8 @@ import If from "./utils/If.astro";
   <script>
     const button = document.querySelector("#menu-button"); // Hamburger Icon
     const menu = document.querySelector("#menu"); // Menu
-    button.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+    button?.addEventListener("click", () => {
+      menu?.classList.toggle("hidden");
     });
   </script>
 </nav>
