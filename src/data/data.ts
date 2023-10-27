@@ -734,21 +734,21 @@ const raffles = [
   {
     url: "raffles/regalos.jpeg",
     descriptionInParagraphs: [
-      "¡Biznagafest está a punto de despegar! En este emocionante evento de programación, los 450 primeros inscritos serán recompensados con una camiseta exclusiva del evento, un altavoz mini y una práctica bolsa. Regístrate ahora y prepárate para sumergirte en el mundo de la codificación. 🚀💻🎉 #BiznagaFest2023 #Programación #Málaga",
+      "¡Biznagafest está a punto de despegar! En este emocionante evento de programación, los 450 primeros inscritos serán recompensados con una camiseta exclusiva del evento, un altavoz mini y una práctica bolsa. Regístrate ahora y prepárate para sumergirte en el mundo de la codificación. 🚀💻🎉 #BiznagaFest23 #Programación #Málaga",
     ],
   },
   {
     url: "raffles/sorteo4.jpeg",
     descriptionInParagraphs: [
       "¡El Kahoot del Biznagafest va a ser una locura! ¿Por qué? Porque las preguntas no solo desafiarán tu ingenio, ¡sino que también te traerán lo último en tecnología gracias a nuestros patrocinadores! 🎮📱",
-      "Los 3 más astutos se llevarán a casa libros de Clean Code y Clean Architecture para llevar tu programación al siguiente nivel 📚💻, junto con un Kindle brillante y portátil 📱. ¿Te preguntas por qué estamos tan emocionados? ¡Porque las preguntas del Kahoot vendrán directamente de nuestros increíbles patrocinadores, así que además de aprender, podrías llevarte premios épicos que solo los verdaderos conocedores de la tecnología podrán apreciar. ¿Estás listo para este desafío lleno de sorpresas? ¡Únete a la diversión y prepárate para competir y aprender como un campeón! 🚀🧠 #BiznagaFest2023 #Kahoot #PremiosGeniales",
+      "Los 3 más astutos se llevarán a casa libros de Clean Code y Clean Architecture para llevar tu programación al siguiente nivel 📚💻, junto con un Kindle brillante y portátil 📱. ¿Te preguntas por qué estamos tan emocionados? ¡Porque las preguntas del Kahoot vendrán directamente de nuestros increíbles patrocinadores, así que además de aprender, podrías llevarte premios épicos que solo los verdaderos conocedores de la tecnología podrán apreciar. ¿Estás listo para este desafío lleno de sorpresas? ¡Únete a la diversión y prepárate para competir y aprender como un campeón! 🚀🧠 #BiznagaFest23 #Kahoot #PremiosGeniales",
     ],
   },
   {
     url: "raffles/sorteo2.jpeg",
     descriptionInParagraphs: [
-      '¡Prepárate para un concurso divertido en el Biznagafest! ¿Eres un artista en potencia? 🎨 ¡Demuéstralo! Sube una foto de tu acreditación con un dibujo creativo y participa en nuestro concurso en Twitter. El twit con más "Me gusta" y el hashtag #BiznagaFest2023 se llevará a casa un increíble Firestick 🔥.',
-      "Pero eso no es todo, ¡asegúrate de seguir a @BiznagaFest en Twitter para participar! ¿Tienes lo necesario para ganar? ¡Muestra tu talento y participa para tener la oportunidad de llevarte este premio genial! 📸💡 #BiznagaFest2023 #ConcursoTwitter #DibujoCreativo",
+      '¡Prepárate para un concurso divertido en el Biznagafest! ¿Eres un artista en potencia? 🎨 ¡Demuéstralo! Sube una foto de tu acreditación con un dibujo creativo y participa en nuestro concurso en Twitter. El twit con más "Me gusta" y el hashtag #BiznagaFest23 se llevará a casa un increíble Firestick 🔥.',
+      "Pero eso no es todo, ¡asegúrate de seguir a @BiznagaFest en Twitter para participar! ¿Tienes lo necesario para ganar? ¡Muestra tu talento y participa para tener la oportunidad de llevarte este premio genial! 📸💡 #BiznagaFest23 #ConcursoTwitter #DibujoCreativo",
     ],
   },
   {
@@ -756,22 +756,22 @@ const raffles = [
     descriptionInParagraphs: [
       "¡Aventúrate por el Biznagafest y descubre los tesoros que nuestros patrocinadores tienen para ti! 🛍️",
       "Pasa por los stands de nuestros patrocinadores y recibe un sello en tu acreditación en cada uno. ¡Cuando tengas todos los sellos, entrarás en un sorteo especial! 🤝",
-      "Los afortunados podrán ganar unos impresionantes cascos Sony INZONE H3 🎧. Así que, explora, conoce a nuestros patrocinadores y ten la oportunidad de llevarte un premio genial. ¡Buena suerte a todos los participantes! 🤞💼 #BiznagaFest2023 #Patrocinadores #Sorteo",
+      "Los afortunados podrán ganar unos impresionantes cascos Sony INZONE H3 🎧. Así que, explora, conoce a nuestros patrocinadores y ten la oportunidad de llevarte un premio genial. ¡Buena suerte a todos los participantes! 🤞💼 #BiznagaFest23 #Patrocinadores #Sorteo",
     ],
   },
   {
     url: "raffles/sorteo1.jpeg",
     descriptionInParagraphs: [
       "¡Prepárate para desatar tu lado más creativo en el Biznagafest! 🎉",
-      "¿Eres un maestro del meme? ¡Demuéstralo! Crea memes divertidos y originales relacionados con el evento y súbelos a Twitter con el hashtag #BiznagaFest2023. Pero eso no es todo, asegúrate de seguirnos en @BiznagaFest para participar.",
-      'Los memes con más "Me gusta" ganarán premios increíbles, incluyendo libros de Clean Code, Clean Architecture y el best-seller "Hábitos Atómicos" 📚. ¡Demuestra tu ingenio y participa para tener la oportunidad de llevarte estos valiosos tesoros de conocimiento! 🚀💡 #ConcursoMemes #BiznagaFest2023',
+      "¿Eres un maestro del meme? ¡Demuéstralo! Crea memes divertidos y originales relacionados con el evento y súbelos a Twitter con el hashtag #BiznagaFest23. Pero eso no es todo, asegúrate de seguirnos en @BiznagaFest para participar.",
+      'Los memes con más "Me gusta" ganarán premios increíbles, incluyendo libros de Clean Code, Clean Architecture y el best-seller "Hábitos Atómicos" 📚. ¡Demuestra tu ingenio y participa para tener la oportunidad de llevarte estos valiosos tesoros de conocimiento! 🚀💡 #ConcursoMemes #BiznagaFest23',
     ],
   },
   {
     url: "raffles/darkvader.jpeg",
     descriptionInParagraphs: [
       '¡Atención a todos los amantes de Star Wars! En el coffee break de las 17:30 en nuestro booth, "Fortris" sorteará un impresionante Lego de Darth Vader. Para participar, simplemente pasa por su stand durante el día y deja tu participación en la urna.',
-      "Aquí viene la emoción: ¡debes estar presente en el momento del sorteo para reclamar tu premio! Si no estás allí, sacaremos otra papeleta hasta que el premio tenga un dueño o dueña. No querrás perderte la oportunidad de llevarte este increíble premio. ¡Que la Fuerza te acompañe! 🌌✨ #BiznagaFest2023 #SorteoFortris #DarthVaderLego",
+      "Aquí viene la emoción: ¡debes estar presente en el momento del sorteo para reclamar tu premio! Si no estás allí, sacaremos otra papeleta hasta que el premio tenga un dueño o dueña. No querrás perderte la oportunidad de llevarte este increíble premio. ¡Que la Fuerza te acompañe! 🌌✨ #BiznagaFest23 #SorteoFortris #DarthVaderLego",
     ],
   },
   {
@@ -791,7 +791,7 @@ const raffles = [
       "1️⃣ Para participar en el SORTEO BOOTCAMP MODALIDAD A TU RITMO, simplemente busca a nuestro astronauta, tómate una foto con él y luego síguenos en Twitter y/o Instagram. Comparte la foto en ambas redes mencionándonos para tener el doble de oportunidades de ganar.",
       "2️⃣ En nuestra RULETA DE LA SUERTE, podrás girar la ruleta y ganar una beca del 100% para nuestro nuevo curso de Desarrollo Mobile. ¡La suerte podría estar de tu lado!",
       "3️⃣ Además, jugaremos a ¿HACEMOS MATCH? junto con Fill The Gap. Usaremos una divertida aplicación estilo Tinder, donde podrás decidir si prefieres nuestra app o sitio web. Responde correctamente a la pregunta relacionada con nuestras formaciones para ganar.",
-      "¡Esperamos verte en el stand de CODE SPACE en BiznagaFest para disfrutar de estas emocionantes actividades! 🌐🎈 #BiznagaFest2023 #CODESPACE #DiversiónYTEC",
+      "¡Esperamos verte en el stand de CODE SPACE en BiznagaFest para disfrutar de estas emocionantes actividades! 🌐🎈 #BiznagaFest23 #CODESPACE #DiversiónYTEC",
     ],
   },
 ] as const satisfies ReadonlyArray<Raffle>;
