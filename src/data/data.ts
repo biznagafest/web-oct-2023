@@ -991,7 +991,7 @@ const team = {
 const gallery: string[] = [];
 
 const welcomeBanner = {
-  isEnabled: false,
+  isEnabled: true,
 } satisfies Readonly<WelcomeBanner>;
 
 export const DATA: Data = {
