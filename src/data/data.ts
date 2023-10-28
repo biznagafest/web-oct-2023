@@ -80,7 +80,7 @@ export const speakers = [
   },
   {
     name: "Irene M Morgado",
-    position: "Head of Brand & Culture, Kairós Digital Solutions",
+    position: "Head of Brand & Culture",
     picture: "/speakers/irene.jpg",
     descriptionParagraphs: [],
     socials: {
